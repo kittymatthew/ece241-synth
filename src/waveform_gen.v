@@ -42,7 +42,6 @@ module sine_gen (NOTE, OUT, clock, reset);
 
     initial begin
         $readmemh("sine_lookup.hex", SINE_LUT, 0, 1023);
-        $display("SINE_LUT[0] = %h, SINE_LUT[1] = %h", SINE_LUT[0], SINE_LUT[1]);
     end
 
     localparam C = 5'b00001;
@@ -110,10 +109,9 @@ module sine_gen (NOTE, OUT, clock, reset);
     end
 
     wire [31:0] next_count = COUNT + STEP;
-    wire [9:0] next_address = next_count[21:12];
+    wire [9:0] next_address = next_count[31:22];
 
     always @ (posedge clock, posedge reset) begin
-        //$display("COUNT=%d, STEP=%d, next_address=%d, OUT=%h", COUNT, STEP, next_address, OUT);
         if (reset) begin 
             COUNT <= 32'b0; 
             OUT <= 32'b0; 

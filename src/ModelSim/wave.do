@@ -8,7 +8,7 @@ add wave -noupdate -format Analog-Step -height 74 -label AUDIO_OUT -max 21474836
 add wave -noupdate -label COUNT /testbench/U1/sine_gen/sine_generator/COUNT
 add wave -noupdate -label STEP /testbench/U1/sine_gen/sine_generator/STEP
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {10000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {2092030000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 80
 configure wave -valuecolwidth 40
@@ -24,4 +24,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {50 us}
+WaveRestoreZoom {0 ps} {3 ms}

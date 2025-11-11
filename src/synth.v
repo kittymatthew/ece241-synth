@@ -45,6 +45,9 @@ module synth (
     wire reset;
     wire [4:0] NOTE;
     wire [31:0] AUDIO_OUT;
+    wire audio_out_allowed;
+    wire [31:0] left_unused, right_unused; 
+    wire audio_in_unused;
 
     // Static assignments
     assign reset = KEY[0];
@@ -54,4 +57,7 @@ module synth (
 
    // avconf av_config (CLOCK_50, reset, FPGA_I2C_SCLK, FPGA_I2C_SDAT);
     waveform_gen sine_gen (tSINE, NOTE, AUDIO_OUT, CLOCK_50, SW[6], reset);
+    Audio_Controller processor  (CLOCK_50, reset, 1'b0, 1'b0, 1'b0, AUDIO_OUT, AUDIO_OUT, 
+                                SW[6], AUD_ADCDAT, AUD_BCLK,AUD_ADCLRCK, AUD_DACLRCK, left_unused, 
+                                right_unused, audio_in_unused, audio_out_allowed, AUD_XCK, AUD_DACDAT);
 endmodule
