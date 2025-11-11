@@ -42,6 +42,7 @@ module sine_gen (NOTE, OUT, clock, reset);
 
     initial begin
         $readmemh("sine_lookup.hex", SINE_LUT, 0, 1023);
+        $display("SINE_LUT[0] = %h, SINE_LUT[1] = %h", SINE_LUT[0], SINE_LUT[1]);
     end
 
     localparam C = 5'b00001;
@@ -104,23 +105,21 @@ module sine_gen (NOTE, OUT, clock, reset);
             Asharp2: STEP = 32'd80087; // 932.33 Hz
             B2:      STEP = 32'd84849; // 987.77 Hz
             C3:      STEP = 32'd89901; // 1046.59 Hz
+            default: STEP = 32'd0;
         endcase
     end
 
+    wire [31:0] next_count = COUNT + STEP;
+    wire [9:0] next_address = next_count[21:12];
+
     always @ (posedge clock, posedge reset) begin
+        //$display("COUNT=%d, STEP=%d, next_address=%d, OUT=%h", COUNT, STEP, next_address, OUT);
         if (reset) begin 
             COUNT <= 32'b0; 
-        end else begin
-            COUNT <= COUNT + STEP;           
-        end
-    end
-
-    wire [9:0] ADDRESS = COUNT[31:22];
-    always @ (posedge clock, posedge reset) begin
-        if (reset) begin
             OUT <= 32'b0; 
         end else begin
-        OUT <= SINE_LUT[ADDRESS];
+            COUNT <= next_count;      
+            OUT <= SINE_LUT[next_address];     
         end
     end
 endmodule

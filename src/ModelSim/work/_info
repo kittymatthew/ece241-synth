@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/matth/OneDrive/Desktop/ECE241/Lab 5/Part 3/ModelSim
 vAltera_UP_Audio_Bit_Counter
-Z1 !s110 1762826823
+Z1 !s110 1762828282
 !i10b 1
 !s100 0o^lS^IaZf6lc8;mFc89O3
 IWE7gCzzeBz[K^[_k9z;Y11
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1762826823.000000
+Z7 !s108 1762828282.000000
 Z8 !s107 ../ext/Audio_Controller/Audio_Controller.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
 Z9 !s90 -reportprogress|300|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Audio_Controller.v|
 !i113 1
@@ -198,7 +198,7 @@ R9
 R10
 n@audio_@controller
 vavconf
-R1
+Z17 !s110 1762828283
 !i10b 1
 !s100 EJjnK;_B9a[bW;7Ogb]372
 I;Tjz@`OWlf5RXeH5OI`PK3
@@ -212,75 +212,75 @@ R6
 r1
 !s85 0
 31
-R7
-Z17 !s107 ../ext/avconf/avconf.v|../ext/avconf/I2C_Controller.v|
-Z18 !s90 -reportprogress|300|../ext/avconf/I2C_Controller.v|../ext/avconf/avconf.v|
+Z18 !s108 1762828283.000000
+Z19 !s107 ../ext/avconf/avconf.v|../ext/avconf/I2C_Controller.v|
+Z20 !s90 -reportprogress|300|../ext/avconf/I2C_Controller.v|../ext/avconf/avconf.v|
 !i113 1
 R10
 vcounter
-Z19 !s110 1762465196
+Z21 !s110 1762465196
 !i10b 1
 !s100 L5`VUhWk45TC@06T`OZjD3
 Inj[WCR_<IMAI3IW;6zZlh3
 R2
 R0
-Z20 w1762452756
-Z21 8../part3.v
-Z22 F../part3.v
+Z22 w1762452756
+Z23 8../part3.v
+Z24 F../part3.v
 L0 102
 R6
 r1
 !s85 0
 31
-Z23 !s108 1762465196.000000
-Z24 !s107 ../part3.v|
-Z25 !s90 -reportprogress|300|../part3.v|
+Z25 !s108 1762465196.000000
+Z26 !s107 ../part3.v|
+Z27 !s90 -reportprogress|300|../part3.v|
 !i113 1
 R10
 vcounterLengthCompare
-R19
+R21
 !i10b 1
 !s100 egBUQ2Y9HbW0mYoIhNYO=0
 I=RZTe1K?Lz`8S6HAl0zRD0
 R2
 R0
-R20
-R21
 R22
+R23
+R24
 L0 113
 R6
 r1
 !s85 0
 31
-R23
-R24
 R25
+R26
+R27
 !i113 1
 R10
 ncounter@length@compare
 vhalfSecondCnt
-R19
+R21
 !i10b 1
 !s100 H86lgk]3[b6DSaAQlLzI?0
 I3B3<n0:KGKc@@EnYi:RCm1
 R2
 R0
-R20
-R21
 R22
+R23
+R24
 L0 146
 R6
 r1
 !s85 0
 31
-R23
-R24
 R25
+R26
+R27
 !i113 1
 R10
 nhalf@second@cnt
 vI2C_Controller
-R1
+R17
 !i10b 1
 !s100 OAXd<oakAV^2m_WfM4RVS0
 I7Q>_9[1W66X5nS>Hg10Qb0
@@ -294,136 +294,136 @@ R6
 r1
 !s85 0
 31
-R7
-R17
 R18
+R19
+R20
 !i113 1
 R10
 n@i2@c_@controller
 vletterMux
-R19
+R21
 !i10b 1
 !s100 ]Z7Y=N:JhlJ?EiFfE^Qke3
 IoNzJ_=QcQzMHaknfD1AlH3
 R2
 R0
-R20
-R21
 R22
+R23
+R24
 L0 79
 R6
 r1
 !s85 0
 31
-R23
-R24
 R25
+R26
+R27
 !i113 1
 R10
 nletter@mux
 vpart3
-R19
+R21
 !i10b 1
 !s100 KcZD7bRU4NAl@R<BQ5iD50
 I0EFQ:QJAXEVmnkf^MmXR[2
 R2
 R0
-R20
-R21
 R22
+R23
+R24
 L0 1
 R6
 r1
 !s85 0
 31
-R23
-R24
 R25
+R26
+R27
 !i113 1
 R10
 vsaw_gen
-R1
+R17
 !i10b 1
-!s100 D<BK9P0^m]<DEY5DFIh;A3
-IXnOBgogDA;Z:6RVjRFYA:0
+!s100 UX8ZeL>>?h;?[5KB7YM;J3
+ITnK:B8W[h1E3bQ][VLYlo3
 R2
 R3
-Z26 w1762826029
-Z27 8../waveform_gen.v
-Z28 F../waveform_gen.v
-L0 135
+Z28 w1762828201
+Z29 8../waveform_gen.v
+Z30 F../waveform_gen.v
+L0 134
 R6
 r1
 !s85 0
 31
-R7
-Z29 !s107 ../waveform_gen.v|../synth.v|../aud_out_processor.v|
-Z30 !s90 -reportprogress|300|../aud_out_processor.v|../synth.v|../waveform_gen.v|
+R18
+Z31 !s107 ../waveform_gen.v|../synth.v|../aud_out_processor.v|
+Z32 !s90 -reportprogress|300|../aud_out_processor.v|../synth.v|../waveform_gen.v|
 !i113 1
 R10
 vshiftReg_4bit
-R19
+R21
 !i10b 1
 !s100 k:j7iXf_Dlk_hNbMa5[2L3
 I2FgDX1TTGL2inFz0`2:dz1
 R2
 R0
-R20
-R21
 R22
+R23
+R24
 L0 120
 R6
 r1
 !s85 0
 31
-R23
-R24
 R25
+R26
+R27
 !i113 1
 R10
 nshift@reg_4bit
 vsine_gen
-R1
+R17
 !i10b 1
-!s100 [Dz_ASIgO4KT1G@aLzQ`R0
-I_loSWCPO_`>YZf9b3Uo0Q0
+!s100 >1iaNc94m93K3dF5`EMDC2
+IZ8ni3k9_X4BPz56>RNFbE3
 R2
 R3
-R26
-R27
 R28
+R29
+R30
 L0 34
 R6
 r1
 !s85 0
 31
-R7
-R29
-R30
+R18
+R31
+R32
 !i113 1
 R10
 vsquare_gen
-R1
+R17
 !i10b 1
-!s100 ^WXV[`>7Vb<OVY]GQRM:^2
-I1fXQcCTbAh^4P4z^>dXmY1
+!s100 1=ek@gjiYUDd6]he7O3VJ0
+IcE;4nZPTlhWhO?k[0UL3X3
 R2
 R3
-R26
-R27
 R28
-L0 128
+R29
+R30
+L0 127
 R6
 r1
 !s85 0
 31
-R7
-R29
-R30
+R18
+R31
+R32
 !i113 1
 R10
 vsynth
-R1
+R17
 !i10b 1
 !s100 48>^[l7Sf^W<A::eP@nNC2
 INaYPc[B2R?02IQl8TOhV62
@@ -437,19 +437,19 @@ R6
 r1
 !s85 0
 31
-R7
-R29
-R30
+R18
+R31
+R32
 !i113 1
 R10
 vtestbench
-R1
+R17
 !i10b 1
-!s100 IeUf8SYN]K1EO0EDHj>mD0
-I_@oL2=C>k=a^D`aZ4UXFh2
+!s100 DAKl6MMFJ<BG1hgUi:W>60
+I[4XQ08neTa>1RbFJAD6OB1
 R2
 R3
-w1762826393
+w1762828277
 8testbench.v
 Ftestbench.v
 L0 3
@@ -457,28 +457,28 @@ R6
 r1
 !s85 0
 31
-R7
+R18
 !s107 testbench.v|
 !s90 -reportprogress|300|testbench.v|
 !i113 1
 R10
 vwaveform_gen
-R1
+R17
 !i10b 1
 !s100 mC6hWCfm?e6]7T_W2mY=e0
 I:U3:z6K3771A<>i8V7O2g1
 R2
 R3
-R26
-R27
 R28
+R29
+R30
 L0 1
 R6
 r1
 !s85 0
 31
-R7
-R29
-R30
+R18
+R31
+R32
 !i113 1
 R10

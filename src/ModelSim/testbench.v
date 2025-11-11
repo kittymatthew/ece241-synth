@@ -27,12 +27,12 @@ module testbench ();
     end
 
     initial begin // Reset the circuit at the beginning
-        KEY[0] <= 1'b0;
-        #10 KEY[0] <= 1'b1;
+        KEY[0] <= 1'b1;
+        #10 KEY[0] <= 1'b0;
     end
 
     initial begin // Main testbench actions
-        SW <= 10'b0000101100;
+        SW <= 10'b0001001100;
     end
 
     synth U1    (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LEDR,
