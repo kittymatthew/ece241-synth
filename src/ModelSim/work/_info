@@ -1,0 +1,484 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/matth/OneDrive/Desktop/ECE241/Lab 5/Part 3/ModelSim
+vAltera_UP_Audio_Bit_Counter
+Z1 !s110 1762826823
+!i10b 1
+!s100 0o^lS^IaZf6lc8;mFc89O3
+IWE7gCzzeBz[K^[_k9z;Y11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ModelSim
+Z4 w1216132274
+8../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
+F../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
+Z5 L0 11
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1762826823.000000
+Z8 !s107 ../ext/Audio_Controller/Audio_Controller.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
+Z9 !s90 -reportprogress|300|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Audio_Controller.v|
+!i113 1
+Z10 tCvgOpt 0
+n@altera_@u@p_@audio_@bit_@counter
+vAltera_UP_Audio_In_Deserializer
+R1
+!i10b 1
+!s100 QIN=mllYL6NF954KEZgo00
+I2Y^^NSbJ;6@W>b>S]ig153
+R2
+R3
+R4
+8../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
+F../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@altera_@u@p_@audio_@in_@deserializer
+vAltera_UP_Audio_Out_Serializer
+R1
+!i10b 1
+!s100 ^b>IEB6190omD0d_0TU]R0
+IU>TcG=GXbGAl;hz6gD<0z1
+R2
+R3
+R4
+8../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
+F../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@altera_@u@p_@audio_@out_@serializer
+vAltera_UP_Clock_Edge
+R1
+!i10b 1
+!s100 m;MP:OR1QP]f>i1a;Th_h0
+IdXnzfHe[[QXbJ7f=TSbgF0
+R2
+R3
+R4
+8../ext/Audio_Controller/Altera_UP_Clock_Edge.v
+F../ext/Audio_Controller/Altera_UP_Clock_Edge.v
+Z11 L0 10
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@altera_@u@p_@clock_@edge
+vAltera_UP_PS2_Command_Out
+Z12 !s110 1762825140
+!i10b 1
+!s100 ZjDIV:z^W4aE7ECD]ReVK0
+IR1znRz7aBUCYVzAC2@fTN3
+R2
+R3
+Z13 w1163127314
+8../ext/PS2_Controller/Altera_UP_PS2_Command_Out.v
+F../ext/PS2_Controller/Altera_UP_PS2_Command_Out.v
+R11
+R6
+r1
+!s85 0
+31
+Z14 !s108 1762825140.000000
+Z15 !s107 ../ext/PS2_Controller/PS2_Controller.v|../ext/PS2_Controller/Altera_UP_PS2_Data_In.v|../ext/PS2_Controller/Altera_UP_PS2_Command_Out.v|
+Z16 !s90 -reportprogress|300|../ext/PS2_Controller/Altera_UP_PS2_Command_Out.v|../ext/PS2_Controller/Altera_UP_PS2_Data_In.v|../ext/PS2_Controller/PS2_Controller.v|
+!i113 1
+R10
+n@altera_@u@p_@p@s2_@command_@out
+vAltera_UP_PS2_Data_In
+R12
+!i10b 1
+!s100 ee^TmQcGZ[E_>UMojW[Zg0
+IMESd;MZ;SCAkKddJU64R<0
+R2
+R3
+R13
+8../ext/PS2_Controller/Altera_UP_PS2_Data_In.v
+F../ext/PS2_Controller/Altera_UP_PS2_Data_In.v
+R11
+R6
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R10
+n@altera_@u@p_@p@s2_@data_@in
+vAltera_UP_SYNC_FIFO
+R1
+!i10b 1
+!s100 ?S5>gdm0e84HSI=i?VPQ43
+IH3X4eF;XFT1D^cQMO[C7H0
+R2
+R3
+R4
+8../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v
+F../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@altera_@u@p_@s@y@n@c_@f@i@f@o
+vAudio_Clock
+R1
+!i10b 1
+!s100 zMXi]?PGQWc4TB2kK;I9[2
+IeR<OjVf>AC=4P=6:Y?@1k1
+R2
+R3
+R4
+8../ext/Audio_Controller/Audio_Clock.v
+F../ext/Audio_Controller/Audio_Clock.v
+L0 39
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@audio_@clock
+vAudio_Controller
+R1
+!i10b 1
+!s100 <zSf`2aS;^jM9^FV>_a`a2
+If]_5oECC;5I3_<h]cDU[Y3
+R2
+R3
+w1217881764
+8../ext/Audio_Controller/Audio_Controller.v
+F../ext/Audio_Controller/Audio_Controller.v
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@audio_@controller
+vavconf
+R1
+!i10b 1
+!s100 EJjnK;_B9a[bW;7Ogb]372
+I;Tjz@`OWlf5RXeH5OI`PK3
+R2
+R3
+w1509645136
+8../ext/avconf/avconf.v
+F../ext/avconf/avconf.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+Z17 !s107 ../ext/avconf/avconf.v|../ext/avconf/I2C_Controller.v|
+Z18 !s90 -reportprogress|300|../ext/avconf/I2C_Controller.v|../ext/avconf/avconf.v|
+!i113 1
+R10
+vcounter
+Z19 !s110 1762465196
+!i10b 1
+!s100 L5`VUhWk45TC@06T`OZjD3
+Inj[WCR_<IMAI3IW;6zZlh3
+R2
+R0
+Z20 w1762452756
+Z21 8../part3.v
+Z22 F../part3.v
+L0 102
+R6
+r1
+!s85 0
+31
+Z23 !s108 1762465196.000000
+Z24 !s107 ../part3.v|
+Z25 !s90 -reportprogress|300|../part3.v|
+!i113 1
+R10
+vcounterLengthCompare
+R19
+!i10b 1
+!s100 egBUQ2Y9HbW0mYoIhNYO=0
+I=RZTe1K?Lz`8S6HAl0zRD0
+R2
+R0
+R20
+R21
+R22
+L0 113
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+ncounter@length@compare
+vhalfSecondCnt
+R19
+!i10b 1
+!s100 H86lgk]3[b6DSaAQlLzI?0
+I3B3<n0:KGKc@@EnYi:RCm1
+R2
+R0
+R20
+R21
+R22
+L0 146
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+nhalf@second@cnt
+vI2C_Controller
+R1
+!i10b 1
+!s100 OAXd<oakAV^2m_WfM4RVS0
+I7Q>_9[1W66X5nS>Hg10Qb0
+R2
+R3
+w1509470771
+8../ext/avconf/I2C_Controller.v
+F../ext/avconf/I2C_Controller.v
+L0 43
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 1
+R10
+n@i2@c_@controller
+vletterMux
+R19
+!i10b 1
+!s100 ]Z7Y=N:JhlJ?EiFfE^Qke3
+IoNzJ_=QcQzMHaknfD1AlH3
+R2
+R0
+R20
+R21
+R22
+L0 79
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+nletter@mux
+vpart3
+R19
+!i10b 1
+!s100 KcZD7bRU4NAl@R<BQ5iD50
+I0EFQ:QJAXEVmnkf^MmXR[2
+R2
+R0
+R20
+R21
+R22
+L0 1
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+vsaw_gen
+R1
+!i10b 1
+!s100 D<BK9P0^m]<DEY5DFIh;A3
+IXnOBgogDA;Z:6RVjRFYA:0
+R2
+R3
+Z26 w1762826029
+Z27 8../waveform_gen.v
+Z28 F../waveform_gen.v
+L0 135
+R6
+r1
+!s85 0
+31
+R7
+Z29 !s107 ../waveform_gen.v|../synth.v|../aud_out_processor.v|
+Z30 !s90 -reportprogress|300|../aud_out_processor.v|../synth.v|../waveform_gen.v|
+!i113 1
+R10
+vshiftReg_4bit
+R19
+!i10b 1
+!s100 k:j7iXf_Dlk_hNbMa5[2L3
+I2FgDX1TTGL2inFz0`2:dz1
+R2
+R0
+R20
+R21
+R22
+L0 120
+R6
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R10
+nshift@reg_4bit
+vsine_gen
+R1
+!i10b 1
+!s100 [Dz_ASIgO4KT1G@aLzQ`R0
+I_loSWCPO_`>YZf9b3Uo0Q0
+R2
+R3
+R26
+R27
+R28
+L0 34
+R6
+r1
+!s85 0
+31
+R7
+R29
+R30
+!i113 1
+R10
+vsquare_gen
+R1
+!i10b 1
+!s100 ^WXV[`>7Vb<OVY]GQRM:^2
+I1fXQcCTbAh^4P4z^>dXmY1
+R2
+R3
+R26
+R27
+R28
+L0 128
+R6
+r1
+!s85 0
+31
+R7
+R29
+R30
+!i113 1
+R10
+vsynth
+R1
+!i10b 1
+!s100 48>^[l7Sf^W<A::eP@nNC2
+INaYPc[B2R?02IQl8TOhV62
+R2
+R3
+w1762826723
+8../synth.v
+F../synth.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R29
+R30
+!i113 1
+R10
+vtestbench
+R1
+!i10b 1
+!s100 IeUf8SYN]K1EO0EDHj>mD0
+I_@oL2=C>k=a^D`aZ4UXFh2
+R2
+R3
+w1762826393
+8testbench.v
+Ftestbench.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 testbench.v|
+!s90 -reportprogress|300|testbench.v|
+!i113 1
+R10
+vwaveform_gen
+R1
+!i10b 1
+!s100 mC6hWCfm?e6]7T_W2mY=e0
+I:U3:z6K3771A<>i8V7O2g1
+R2
+R3
+R26
+R27
+R28
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R29
+R30
+!i113 1
+R10

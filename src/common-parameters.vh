@@ -1,0 +1,27 @@
+localparam C = 5'b00001;
+localparam Csharp = 5'b00010;
+localparam D = 5'b00011;
+localparam Dsharp = 5'b00100;
+localparam E = 5'b00101;
+localparam F = 5'b00110;
+localparam Fsharp = 5'b00111;
+localparam G = 5'b01000;
+localparam Gsharp = 5'b01001;
+localparam A = 5'b01010;
+localparam Asharp = 5'b01011;
+localparam B = 5'01100;
+localparam C2 = 5'01101;
+localparam Csharp2 = 5'01110;
+localparam D2 = 5'01111;
+localparam Dsharp2 = 5'b10000;
+localparam E2 = 5'b10001;
+localparam F2 = 5'b10010;
+localparam Fsharp2 = 5'b10011;
+localparam G2 = 5'b10100;
+localparam Gsharp2 = 5'b10101;
+localparam A2 = 5'b10110;
+localparam Asharp2 = 5'b10111;
+localparam B2 = 5'b11000;
+localparam C3 = 5'b11001;
+
+localparam tSINE = 3'b000, tSQUARE = 3'b001, tSAW = 3'b010;
