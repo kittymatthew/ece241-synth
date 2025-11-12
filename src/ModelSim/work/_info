@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/matth/OneDrive/Desktop/ECE241/Lab 5/Part 3/ModelSim
 vAltera_UP_Audio_Bit_Counter
-Z1 !s110 1762903306
+Z1 !s110 1762907621
 !i10b 1
 !s100 0o^lS^IaZf6lc8;mFc89O3
 IWE7gCzzeBz[K^[_k9z;Y11
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1762903306.000000
+Z7 !s108 1762907621.000000
 Z8 !s107 ../ext/Audio_Controller/Audio_Controller.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
 Z9 !s90 -reportprogress|300|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Audio_Controller.v|
 !i113 1
@@ -445,11 +445,11 @@ R10
 vtestbench
 R1
 !i10b 1
-!s100 DAKl6MMFJ<BG1hgUi:W>60
-I[4XQ08neTa>1RbFJAD6OB1
+!s100 3TGKa81be>3SaTLWf?d9`1
+IM@SfgKo@G]>1^LAz@0]I30
 R2
 R3
-w1762828585
+w1762907592
 8testbench.v
 Ftestbench.v
 L0 3

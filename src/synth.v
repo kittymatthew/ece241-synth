@@ -50,14 +50,15 @@ module synth (
     wire audio_in_unused;
 
     // Static assignments
-    assign reset = KEY[0];
+    assign reset = !KEY[0];
+    assign enable = SW[6];
     assign NOTE [4:0] = SW[4:0];
 
-    localparam tSINE = 3'b000, tSQUARE = 3'b001, tSAW = 3'b010;
+    parameter tSINE = 3'b000, tSQUARE = 3'b001, tSAW = 3'b010;
 
-   // avconf av_config (CLOCK_50, reset, FPGA_I2C_SCLK, FPGA_I2C_SDAT);
-    waveform_gen sine_gen (tSINE, NOTE, AUDIO_OUT, CLOCK_50, SW[6], reset);
-    Audio_Controller processor  (CLOCK_50, reset, 1'b0, 1'b0, 1'b0, AUDIO_OUT, AUDIO_OUT, 
-                                SW[6], AUD_ADCDAT, AUD_BCLK,AUD_ADCLRCK, AUD_DACLRCK, left_unused, 
+    avconf av_config (CLOCK_50, reset, FPGA_I2C_SCLK, FPGA_I2C_SDAT); // Module for configuring the audio_controller
+    waveform_gen sine_gen (tSINE, NOTE, AUDIO_OUT, CLOCK_50, enable, reset); // Instantiate the waveform generator
+    Audio_Controller processor  (CLOCK_50, reset, 1'b0, 1'b0, 1'b0, AUDIO_OUT, AUDIO_OUT, // Output the same signal to the left and right channels
+                                enable, AUD_ADCDAT, AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, left_unused, // Audio inputs are not used
                                 right_unused, audio_in_unused, audio_out_allowed, AUD_XCK, AUD_DACDAT);
 endmodule

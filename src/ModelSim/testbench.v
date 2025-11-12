@@ -33,6 +33,7 @@ module testbench ();
 
     initial begin // Main testbench actions
         SW <= 10'b0001001100;
+        #5000000 SW <= 10'b0001000001;
     end
 
     synth U1    (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LEDR,
