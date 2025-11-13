@@ -1,5 +1,5 @@
 Analysis & Synthesis report for synth
-Thu Nov 13 15:55:02 2025
+Thu Nov 13 16:14:19 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -88,16 +88,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 13 15:55:02 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 13 16:14:19 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; synth                                       ;
 ; Top-level Entity Name           ; synth                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 280                                         ;
+; Total registers                 ; 345                                         ;
 ; Total pins                      ; 77                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 8,256                                       ;
+; Total block memory bits         ; 40,960                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -271,20 +271,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 227            ;
+; Estimate of Logic utilization (ALMs needed) ; 274            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 372            ;
-;     -- 7 input functions                    ; 2              ;
-;     -- 6 input functions                    ; 77             ;
-;     -- 5 input functions                    ; 80             ;
-;     -- 4 input functions                    ; 21             ;
-;     -- <=3 input functions                  ; 192            ;
+; Combinational ALUT usage for logic          ; 453            ;
+;     -- 7 input functions                    ; 4              ;
+;     -- 6 input functions                    ; 86             ;
+;     -- 5 input functions                    ; 100            ;
+;     -- 4 input functions                    ; 34             ;
+;     -- <=3 input functions                  ; 229            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 280            ;
+; Dedicated logic registers                   ; 345            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 77             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 8256           ;
+; Total block memory bits                     ; 40960          ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
@@ -292,9 +292,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 319            ;
-; Total fan-out                               ; 3589           ;
-; Average fan-out                             ; 3.95           ;
+; Maximum fan-out                             ; 384            ;
+; Total fan-out                               ; 4399           ;
+; Average fan-out                             ; 4.17           ;
 +---------------------------------------------+----------------+
 
 
@@ -303,38 +303,40 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node                                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                             ; Entity Name                    ; Library Name ;
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
-; |synth                                                      ; 372 (1)             ; 280 (0)                   ; 8256              ; 0          ; 77   ; 0            ; |synth                                                                                                                                                                                                                          ; synth                          ; work         ;
-;    |Audio_Controller:processor|                             ; 154 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor                                                                                                                                                                                               ; Audio_Controller               ; work         ;
-;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 151 (57)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer ; work         ;
+; |synth                                                      ; 453 (0)             ; 345 (0)                   ; 40960             ; 0          ; 77   ; 0            ; |synth                                                                                                                                                                                                                          ; synth                          ; work         ;
+;    |Audio_Controller:processor|                             ; 152 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor                                                                                                                                                                                               ; Audio_Controller               ; work         ;
+;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 149 (55)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer ; work         ;
 ;          |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|  ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO            ; work         ;
 ;             |scfifo:Sync_FIFO|                              ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                         ; work         ;
 ;                |scfifo_7ba1:auto_generated|                 ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                               ; scfifo_7ba1                    ; work         ;
-;                   |a_dpfifo_q2a1:dpfifo|                    ; 47 (25)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                          ; a_dpfifo_q2a1                  ; work         ;
+;                   |a_dpfifo_q2a1:dpfifo|                    ; 47 (24)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                          ; a_dpfifo_q2a1                  ; work         ;
 ;                      |altsyncram_n3i1:FIFOram|              ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram  ; altsyncram_n3i1                ; work         ;
 ;                      |cntr_h2b:rd_ptr_msb|                  ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_h2b:rd_ptr_msb      ; cntr_h2b                       ; work         ;
 ;                      |cntr_i2b:wr_ptr|                      ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_i2b:wr_ptr          ; cntr_i2b                       ; work         ;
-;                      |cntr_u27:usedw_counter|               ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter   ; cntr_u27                       ; work         ;
+;                      |cntr_u27:usedw_counter|               ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter   ; cntr_u27                       ; work         ;
 ;          |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO| ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                          ; Altera_UP_SYNC_FIFO            ; work         ;
 ;             |scfifo:Sync_FIFO|                              ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                         ; scfifo                         ; work         ;
 ;                |scfifo_7ba1:auto_generated|                 ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated                                              ; scfifo_7ba1                    ; work         ;
-;                   |a_dpfifo_q2a1:dpfifo|                    ; 47 (25)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                         ; a_dpfifo_q2a1                  ; work         ;
+;                   |a_dpfifo_q2a1:dpfifo|                    ; 47 (24)             ; 33 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo                         ; a_dpfifo_q2a1                  ; work         ;
 ;                      |altsyncram_n3i1:FIFOram|              ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram ; altsyncram_n3i1                ; work         ;
 ;                      |cntr_h2b:rd_ptr_msb|                  ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_h2b:rd_ptr_msb     ; cntr_h2b                       ; work         ;
 ;                      |cntr_i2b:wr_ptr|                      ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_i2b:wr_ptr         ; cntr_i2b                       ; work         ;
-;                      |cntr_u27:usedw_counter|               ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter  ; cntr_u27                       ; work         ;
+;                      |cntr_u27:usedw_counter|               ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter  ; cntr_u27                       ; work         ;
 ;       |Altera_UP_Clock_Edge:Bit_Clock_Edges|                ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Clock_Edge:Bit_Clock_Edges                                                                                                                                                          ; Altera_UP_Clock_Edge           ; work         ;
 ;       |Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|     ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges                                                                                                                                               ; Altera_UP_Clock_Edge           ; work         ;
 ;       |Audio_Clock:Audio_Clock|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Audio_Clock:Audio_Clock                                                                                                                                                                       ; Audio_Clock                    ; work         ;
 ;          |altpll:altpll_component|                          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component                                                                                                                                               ; altpll                         ; work         ;
 ;             |Audio_Clock_altpll:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated                                                                                                             ; Audio_Clock_altpll             ; work         ;
-;    |PS2_Controller:keyboard|                                ; 88 (2)              ; 62 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard                                                                                                                                                                                                  ; PS2_Controller                 ; work         ;
+;    |PS2_Controller:keyboard|                                ; 108 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard                                                                                                                                                                                                  ; PS2_Controller                 ; work         ;
 ;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                        ; Altera_UP_PS2_Command_Out      ; work         ;
-;    |avconf:av_config|                                       ; 97 (54)             ; 75 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|avconf:av_config                                                                                                                                                                                                         ; avconf                         ; work         ;
-;       |I2C_Controller:u0|                                   ; 43 (43)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|avconf:av_config|I2C_Controller:u0                                                                                                                                                                                       ; I2C_Controller                 ; work         ;
-;    |waveform_gen:sine_gen|                                  ; 32 (0)              ; 33 (32)                   ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen                                                                                                                                                                                                    ; waveform_gen                   ; work         ;
-;       |sine_gen:sine_generator|                             ; 32 (32)             ; 1 (1)                     ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator                                                                                                                                                                            ; sine_gen                       ; work         ;
-;          |altsyncram:SINE_LUT_rtl_0|                        ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0                                                                                                                                                  ; altsyncram                     ; work         ;
-;             |altsyncram_o7d1:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated                                                                                                                   ; altsyncram_o7d1                ; work         ;
+;       |Altera_UP_PS2_Data_In:PS2_Data_In|                   ; 16 (16)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In                                                                                                                                                                ; Altera_UP_PS2_Data_In          ; work         ;
+;    |avconf:av_config|                                       ; 97 (53)             ; 75 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|avconf:av_config                                                                                                                                                                                                         ; avconf                         ; work         ;
+;       |I2C_Controller:u0|                                   ; 44 (44)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|avconf:av_config|I2C_Controller:u0                                                                                                                                                                                       ; I2C_Controller                 ; work         ;
+;    |keyboard_transfer:decoder|                              ; 17 (17)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|keyboard_transfer:decoder                                                                                                                                                                                                ; keyboard_transfer              ; work         ;
+;    |waveform_gen:sine_gen|                                  ; 79 (0)              ; 65 (32)                   ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen                                                                                                                                                                                                    ; waveform_gen                   ; work         ;
+;       |sine_gen:sine_generator|                             ; 79 (79)             ; 33 (33)                   ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator                                                                                                                                                                            ; sine_gen                       ; work         ;
+;          |altsyncram:SINE_LUT_rtl_0|                        ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0                                                                                                                                                  ; altsyncram                     ; work         ;
+;             |altsyncram_o7d1:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated                                                                                                                   ; altsyncram_o7d1                ; work         ;
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -418,9 +420,6 @@ Encoding Type:  One-Hot
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff                                     ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff                                    ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|idle_counter[0..7]                                                                                                                                                                                                     ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[0]                                                                                                                                                                    ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                                                                                                                                                                     ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[1..7]                                                                                                                                                                 ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|done_adc_channel_sync                                                                                                                                                                                               ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[1..32]                                                                                                                                      ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|full_dff                                     ; Lost fanout                                                                                  ;
@@ -450,12 +449,7 @@ Encoding Type:  One-Hot
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[1..7]                                                                                                                                                            ; Merged with PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0] ;
 ; avconf:av_config|I2C_Controller:u0|SD[20,21]                                                                                                                                                                                                   ; Merged with avconf:av_config|I2C_Controller:u0|SD[18]                                        ;
 ; avconf:av_config|mI2C_DATA[20,21]                                                                                                                                                                                                              ; Merged with avconf:av_config|mI2C_DATA[18]                                                   ;
-; keyboard_transfer:decoder|note_out[1..4]                                                                                                                                                                                                       ; Merged with keyboard_transfer:decoder|note_out[0]                                            ;
-; waveform_gen:sine_gen|sine_gen:sine_generator|COUNT[0..12,14..21]                                                                                                                                                                              ; Lost fanout                                                                                  ;
-; waveform_gen:sine_gen|sine_gen:sine_generator|COUNT[13,22..30]                                                                                                                                                                                 ; Merged with waveform_gen:sine_gen|sine_gen:sine_generator|COUNT[31]                          ;
-; keyboard_transfer:decoder|note_out[0]                                                                                                                                                                                                          ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0]                                                                                                                                                               ; Stuck at GND due to stuck port data_in                                                       ;
-; waveform_gen:sine_gen|sine_gen:sine_generator|COUNT[31]                                                                                                                                                                                        ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|s_ps2_transceiver~2                                                                                                                                                                                                    ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|s_ps2_transceiver~3                                                                                                                                                                                                    ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter~2                                                                                                                                                          ; Lost fanout                                                                                  ;
@@ -465,25 +459,16 @@ Encoding Type:  One-Hot
 ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~3                                                                                                                                                                     ; Lost fanout                                                                                  ;
 ; avconf:av_config|mSetup_ST~9                                                                                                                                                                                                                   ; Lost fanout                                                                                  ;
 ; avconf:av_config|mSetup_ST~10                                                                                                                                                                                                                  ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|ps2_data_reg                                                                                                                                                                                                           ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en                                                                                                                                                                     ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                                                                                                                                             ; Lost fanout                                                                                  ;
+; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                       ;
+; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                                                                                                                                                ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0..3]                                                                                                                                                                     ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                                                                                                                                                              ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_0_IDLE                                                                                                                                                                                     ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_1_DATA_IN                                                                                                                                                                                  ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                                                                                                                                              ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                                                                                                                                             ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_4_STOP_IN                                                                                                                                                   ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_0_IDLE                                                                                                                                                      ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                                                                                                                                             ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_2_DATA_IN                                                                                                                                                   ; Lost fanout                                                                                  ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_3_PARITY_IN                                                                                                                                                 ; Lost fanout                                                                                  ;
+; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                                                                                                                                             ; Lost fanout                                                                                  ;
+; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                       ;
+; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_0_IDLE                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT                                                                                                                               ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR                                                                                                                             ; Lost fanout                                                                                  ;
-; Total Number of Removed Registers = 216                                                                                                                                                                                                        ;                                                                                              ;
+; Total Number of Removed Registers = 158                                                                                                                                                                                                        ;                                                                                              ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
 
 
@@ -500,21 +485,6 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                                                            ;                           ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter|counter_reg_bit[6], ;
 ;                                                                                                                                                                                                            ;                           ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|full_dff,                                   ;
 ;                                                                                                                                                                                                            ;                           ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|cntr_u27:usedw_counter|counter_reg_bit[6]   ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver~2                                                                                                                                 ; Lost Fanouts              ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0],                                                                                                                                                                     ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[1],                                                                                                                                                                     ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[2],                                                                                                                                                                     ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3],                                                                                                                                                                     ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                                                                                                                                                          ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA,                                                                                                                                          ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_2_DATA_IN,                                                                                                                                                ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_3_PARITY_IN                                                                                                                                               ;
-; PS2_Controller:keyboard|s_ps2_transceiver~2                                                                                                                                                                ; Lost Fanouts              ; PS2_Controller:keyboard|ps2_data_reg,                                                                                                                                                                                                        ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                                                                                                                                          ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                                                                                                                                             ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_1_DATA_IN,                                                                                                                                                                               ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT,                                                                                                                                                                           ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT,                                                                                                                            ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR                                                                                                                           ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[1]                                                                                                      ; Lost Fanouts              ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|counting,                                                                                                 ;
 ;                                                                                                                                                                                                            ;                           ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[3],                                                                                           ;
 ;                                                                                                                                                                                                            ;                           ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[4],                                                                                           ;
@@ -522,8 +492,12 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                                                            ;                           ; Audio_Controller:processor|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges|cur_test_clk                                                                                                                                                      ;
 ; PS2_Controller:keyboard|idle_counter[3]                                                                                                                                                                    ; Lost Fanouts              ; PS2_Controller:keyboard|idle_counter[4], PS2_Controller:keyboard|idle_counter[5],                                                                                                                                                            ;
 ;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|idle_counter[6], PS2_Controller:keyboard|idle_counter[7]                                                                                                                                                             ;
-; keyboard_transfer:decoder|note_out[0]                                                                                                                                                                      ; Lost Fanouts              ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en,                                                                                                                                                                  ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_4_STOP_IN                                                                                                                                                 ;
+; PS2_Controller:keyboard|s_ps2_transceiver~2                                                                                                                                                                ; Lost Fanouts              ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                                                                                                                                             ;
+;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                                                                                                                                          ;
+;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT,                                                                                                                            ;
+;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR                                                                                                                           ;
+; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                                                                                                          ; Stuck at GND              ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                                                                                                                                                          ;
+;                                                                                                                                                                                                            ; due to stuck port data_in ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                                                                                                                                           ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff ; Lost Fanouts              ; Audio_Controller:processor|done_adc_channel_sync                                                                                                                                                                                             ;
 ; avconf:av_config|mI2C_DATA[23]                                                                                                                                                                             ; Stuck at GND              ; avconf:av_config|I2C_Controller:u0|SD[23]                                                                                                                                                                                                    ;
 ;                                                                                                                                                                                                            ; due to stuck port data_in ;                                                                                                                                                                                                                                              ;
@@ -541,12 +515,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 280   ;
-; Number of registers using Synchronous Clear  ; 154   ;
+; Total registers                              ; 345   ;
+; Number of registers using Synchronous Clear  ; 180   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 72    ;
+; Number of registers using Asynchronous Clear ; 104   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 199   ;
+; Number of registers using Clock Enable       ; 219   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -557,11 +531,11 @@ Encoding Type:  One-Hot
 ; Inverted Register                                ; Fan out ;
 +--------------------------------------------------+---------+
 ; avconf:av_config|I2C_Controller:u0|SCLK          ; 2       ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[5] ; 19      ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[4] ; 21      ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[3] ; 26      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[5] ; 18      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[4] ; 22      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[3] ; 25      ;
 ; avconf:av_config|I2C_Controller:u0|SD_COUNTER[2] ; 22      ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[1] ; 20      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[1] ; 19      ;
 ; avconf:av_config|I2C_Controller:u0|SD_COUNTER[0] ; 27      ;
 ; avconf:av_config|I2C_Controller:u0|END           ; 5       ;
 ; avconf:av_config|I2C_Controller:u0|SDO           ; 2       ;
@@ -578,19 +552,21 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------+--------------------------------------------------------------+------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[1]        ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[16]                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                              ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[15]               ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[9] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |synth|avconf:av_config|I2C_Controller:u0|SD_COUNTER[0]                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[0]                           ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[9]         ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[9]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                               ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[17]                ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[29] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |synth|avconf:av_config|I2C_Controller:u0|SD_COUNTER[4]                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1525,24 +1501,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "keyboard_transfer:decoder"                                                                                                                                                      ;
-+------------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                   ; Type  ; Severity ; Details                                                                                                                                                        ;
-+------------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; data_to_be_transferred ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "data_to_be_transferred[7..1]" will be connected to GND. ;
-+------------------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "keyboard_transfer:decoder"    ;
++------------------------+-------+----------+--------------+
+; Port                   ; Type  ; Severity ; Details      ;
++------------------------+-------+----------+--------------+
+; data_transfered_enable ; Input ; Info     ; Stuck at VCC ;
++------------------------+-------+----------+--------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PS2_Controller:keyboard"                                                                                                                  ;
-+---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                                          ;
-+---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
-; the_command   ; Input  ; Info     ; Stuck at GND                                                                                                                     ;
-; send_command  ; Input  ; Info     ; Stuck at GND                                                                                                                     ;
-; received_data ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "received_data[7..1]" have no fanouts ;
-+---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PS2_Controller:keyboard"                                                                                     ;
++-------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                          ; Type   ; Severity ; Details                                                                             ;
++-------------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; the_command                   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; send_command                  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; command_was_sent              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; error_communication_timed_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; received_data_en              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -1615,35 +1593,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 280                         ;
-;     CLR               ; 20                          ;
+; arriav_ff             ; 345                         ;
+;     CLR               ; 52                          ;
 ;     CLR SCLR          ; 16                          ;
-;     ENA               ; 42                          ;
+;     ENA               ; 46                          ;
 ;     ENA CLR           ; 36                          ;
-;     ENA SCLR          ; 121                         ;
-;     SCLR              ; 17                          ;
-;     plain             ; 28                          ;
+;     ENA SCLR          ; 137                         ;
+;     SCLR              ; 27                          ;
+;     plain             ; 31                          ;
 ; arriav_io_obuf        ; 6                           ;
-; arriav_lcell_comb     ; 372                         ;
-;     arith             ; 120                         ;
-;         1 data inputs ; 106                         ;
-;         2 data inputs ; 14                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 250                         ;
+; arriav_lcell_comb     ; 454                         ;
+;     arith             ; 152                         ;
+;         1 data inputs ; 121                         ;
+;         2 data inputs ; 29                          ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 1                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 298                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 49                          ;
-;         3 data inputs ; 20                          ;
-;         4 data inputs ; 21                          ;
-;         5 data inputs ; 80                          ;
-;         6 data inputs ; 77                          ;
+;         2 data inputs ; 55                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 33                          ;
+;         5 data inputs ; 99                          ;
+;         6 data inputs ; 86                          ;
 ; boundary_port         ; 77                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 96                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.68                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 1.93                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1662,7 +1642,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 13 15:54:53 2025
+    Info: Processing started: Thu Nov 13 16:14:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synth -c synth
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -1700,7 +1680,7 @@ Info (12021): Found 4 design units, including 4 entities, in source file wavefor
 Info (12021): Found 1 design units, including 1 entities, in source file synth.v
     Info (12023): Found entity 1: synth File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file aud_out_processor.v
-Warning (10236): Verilog HDL Implicit Net warning at synth.v(57): created implicit net for "enable" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at synth.v(58): created implicit net for "enable" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 58
 Info (12127): Elaborating entity "synth" for the top level hierarchy
 Warning (10034): Output port "HEX0" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
 Warning (10034): Output port "HEX1" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
@@ -1709,7 +1689,7 @@ Warning (10034): Output port "HEX3" at synth.v(27) has no driver File: C:/Users/
 Warning (10034): Output port "HEX4" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
 Warning (10034): Output port "HEX5" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
 Warning (10034): Output port "LEDR" at synth.v(28) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 28
-Info (12128): Elaborating entity "avconf" for hierarchy "avconf:av_config" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 62
+Info (12128): Elaborating entity "avconf" for hierarchy "avconf:av_config" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 63
 Warning (10230): Verilog HDL assignment warning at avconf.v(68): truncated value with size 32 to match size of target (16) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/avconf.v Line: 68
 Warning (10230): Verilog HDL assignment warning at avconf.v(119): truncated value with size 32 to match size of target (6) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/avconf.v Line: 119
 Warning (10270): Verilog HDL Case Statement warning at avconf.v(131): incomplete case statement has no default case item File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/avconf.v Line: 131
@@ -1717,7 +1697,7 @@ Info (12128): Elaborating entity "I2C_Controller" for hierarchy "avconf:av_confi
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(79): truncated value with size 32 to match size of target (1) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/I2C_Controller.v Line: 79
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(78): truncated value with size 32 to match size of target (1) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/I2C_Controller.v Line: 78
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(91): truncated value with size 32 to match size of target (6) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/I2C_Controller.v Line: 91
-Info (12128): Elaborating entity "waveform_gen" for hierarchy "waveform_gen:sine_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 63
+Info (12128): Elaborating entity "waveform_gen" for hierarchy "waveform_gen:sine_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 64
 Info (12128): Elaborating entity "sine_gen" for hierarchy "waveform_gen:sine_gen|sine_gen:sine_generator" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 10
 Warning (10030): Net "SINE_LUT.data_a" at waveform_gen.v(41) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 41
 Warning (10030): Net "SINE_LUT.waddr_a" at waveform_gen.v(41) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 41
@@ -1726,7 +1706,7 @@ Info (12128): Elaborating entity "square_gen" for hierarchy "waveform_gen:sine_g
 Warning (10034): Output port "OUT" at waveform_gen.v(138) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 138
 Info (12128): Elaborating entity "saw_gen" for hierarchy "waveform_gen:sine_gen|saw_gen:saw_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 12
 Warning (10034): Output port "OUT" at waveform_gen.v(146) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 146
-Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:processor" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 66
+Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:processor" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 67
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "Audio_Controller:processor|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/Audio_Controller/Audio_Controller.v Line: 182
 Info (12128): Elaborating entity "Altera_UP_Audio_In_Deserializer" for hierarchy "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/Audio_Controller/Audio_Controller.v Line: 237
 Info (12128): Elaborating entity "Altera_UP_Audio_Bit_Counter" for hierarchy "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v Line: 159
@@ -1828,10 +1808,10 @@ Info (12133): Instantiated megafunction "Audio_Controller:processor|Audio_Clock:
 Info (12021): Found 1 design units, including 1 entities, in source file db/audio_clock_altpll.v
     Info (12023): Found entity 1: Audio_Clock_altpll File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/audio_clock_altpll.v Line: 29
 Info (12128): Elaborating entity "Audio_Clock_altpll" for hierarchy "Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:keyboard" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 67
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:keyboard" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 68
 Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/PS2_Controller/PS2_Controller.v Line: 246
 Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/PS2_Controller/PS2_Controller.v Line: 266
-Info (12128): Elaborating entity "keyboard_transfer" for hierarchy "keyboard_transfer:decoder" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 68
+Info (12128): Elaborating entity "keyboard_transfer" for hierarchy "keyboard_transfer:decoder" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 69
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|q_b[0]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_n3i1.tdf Line: 37
@@ -1927,7 +1907,7 @@ Info (12133): Instantiated megafunction "waveform_gen:sine_gen|sine_gen:sine_gen
     Info (12134): Parameter "INIT_FILE" = "db/synth.ram0_sine_gen_d6b59fd0.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o7d1.tdf
     Info (12023): Found entity 1: altsyncram_o7d1 File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_o7d1.tdf Line: 27
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
     Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
@@ -1982,8 +1962,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 28
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 180 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 9 MSB VCC or GND address nodes from RAM block "waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated|ALTSYNCRAM" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_o7d1.tdf Line: 685
+Info (17049): 133 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[10] -entity DE1_SoC was ignored
@@ -2574,17 +2553,17 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 25
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 25
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 33
-Info (21057): Implemented 572 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 679 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 55 output pins
     Info (21060): Implemented 6 bidirectional pins
-    Info (21061): Implemented 398 logic cells
+    Info (21061): Implemented 505 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 727 warnings
-    Info: Peak virtual memory: 4955 megabytes
-    Info: Processing ended: Thu Nov 13 15:55:02 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4931 megabytes
+    Info: Processing ended: Thu Nov 13 16:14:19 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 
