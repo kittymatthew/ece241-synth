@@ -27,8 +27,8 @@ module testbench ();
     end
 
     initial begin // Reset the circuit at the beginning
-        KEY[0] <= 1'b1;
-        #10 KEY[0] <= 1'b0;
+        KEY[0] <= 1'b0;
+        #10 KEY[0] <= 1'b1;
     end
 
     initial begin // Main testbench actions
