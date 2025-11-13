@@ -49,7 +49,7 @@ module synth (
     wire [31:0] left_unused, right_unused; 
     wire audio_in_unused;
     wire sent_enable;
-    wire keyboard_input;
+    wire [7:0]keyboard_input;
     wire unused;
 
     // Static assignments
