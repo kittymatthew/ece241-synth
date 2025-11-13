@@ -42,21 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY synth
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:58:06  NOVEMBER 12, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
-set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Audio_Controller.v
-set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Audio_Clock.v
-set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_SYNC_FIFO.v
-set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Clock_Edge.v
-set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
-set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
-set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
-set_global_assignment -name VERILOG_FILE ext/avconf/I2C_Controller.v
-set_global_assignment -name VERILOG_FILE ext/avconf/avconf.v
-set_global_assignment -name VERILOG_FILE ext/PS2_Controller/PS2_Controller.v
-set_global_assignment -name VERILOG_FILE ext/PS2_Controller/Altera_UP_PS2_Data_In.v
-set_global_assignment -name VERILOG_FILE ext/PS2_Controller/Altera_UP_PS2_Command_Out.v
-set_global_assignment -name VERILOG_FILE waveform_gen.v
-set_global_assignment -name VERILOG_FILE synth.v
-set_global_assignment -name VERILOG_FILE aud_out_processor.v
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -893,4 +878,22 @@ set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CK_N -e
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE Keyboard_transfer_notes.v
+set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Audio_Controller.v
+set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Audio_Clock.v
+set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_SYNC_FIFO.v
+set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Clock_Edge.v
+set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
+set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
+set_global_assignment -name VERILOG_FILE ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
+set_global_assignment -name VERILOG_FILE ext/avconf/I2C_Controller.v
+set_global_assignment -name VERILOG_FILE ext/avconf/avconf.v
+set_global_assignment -name VERILOG_FILE ext/PS2_Controller/PS2_Controller.v
+set_global_assignment -name VERILOG_FILE ext/PS2_Controller/Altera_UP_PS2_Data_In.v
+set_global_assignment -name VERILOG_FILE ext/PS2_Controller/Altera_UP_PS2_Command_Out.v
+set_global_assignment -name VERILOG_FILE waveform_gen.v
+set_global_assignment -name VERILOG_FILE synth.v
+set_global_assignment -name VERILOG_FILE aud_out_processor.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

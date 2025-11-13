@@ -1,5 +1,5 @@
 Timing Analyzer report for synth
-Wed Nov 12 10:16:34 2025
+Thu Nov 13 15:57:52 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,23 +99,23 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 32          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.56        ;
+; Average used               ; 1.55        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.3%      ;
+;     Processor 2            ;   4.4%      ;
 ;     Processor 3            ;   4.1%      ;
 ;     Processor 4            ;   4.0%      ;
-;     Processor 5            ;   3.8%      ;
-;     Processor 6            ;   3.8%      ;
-;     Processor 7            ;   3.7%      ;
-;     Processor 8            ;   3.7%      ;
+;     Processor 5            ;   3.7%      ;
+;     Processor 6            ;   3.6%      ;
+;     Processor 7            ;   3.6%      ;
+;     Processor 8            ;   3.6%      ;
 ;     Processor 9            ;   3.6%      ;
-;     Processor 10           ;   3.6%      ;
-;     Processor 11           ;   3.6%      ;
-;     Processor 12           ;   3.6%      ;
-;     Processor 13           ;   3.6%      ;
+;     Processor 10           ;   3.5%      ;
+;     Processor 11           ;   3.5%      ;
+;     Processor 12           ;   3.5%      ;
+;     Processor 13           ;   3.5%      ;
 ;     Processor 14           ;   3.5%      ;
 ;     Processor 15           ;   3.5%      ;
 ;     Processor 16           ;   3.5%      ;
@@ -139,8 +139,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+--------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                     ; Note ;
 +------------+-----------------+--------------------------------+------+
-; 136.87 MHz ; 136.87 MHz      ; CLOCK_50                       ;      ;
-; 295.6 MHz  ; 295.6 MHz       ; avconf:av_config|mI2C_CTRL_CLK ;      ;
+; 171.29 MHz ; 171.29 MHz      ; CLOCK_50                       ;      ;
+; 291.46 MHz ; 291.46 MHz      ; avconf:av_config|mI2C_CTRL_CLK ;      ;
 +------------+-----------------+--------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -156,8 +156,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLOCK_50                       ; -4.166 ; -4.166        ;
-; avconf:av_config|mI2C_CTRL_CLK ; -2.383 ; -136.462      ;
+; CLOCK_50                       ; -3.856 ; -3.856        ;
+; avconf:av_config|mI2C_CTRL_CLK ; -2.431 ; -130.634      ;
 +--------------------------------+--------+---------------+
 
 
@@ -166,8 +166,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; CLOCK_50                       ; 0.234 ; 0.000         ;
-; avconf:av_config|mI2C_CTRL_CLK ; 0.424 ; 0.000         ;
+; CLOCK_50                       ; 0.218 ; 0.000         ;
+; avconf:av_config|mI2C_CTRL_CLK ; 0.438 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -188,7 +188,7 @@ No paths to report.
 +--------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------+--------+---------------+
-; avconf:av_config|mI2C_CTRL_CLK                                                             ; -0.394 ; -36.633       ;
+; avconf:av_config|mI2C_CTRL_CLK                                                             ; -0.394 ; -36.901       ;
 ; processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                                   ; 8.868  ; 0.000         ;
 +--------------------------------------------------------------------------------------------+--------+---------------+
@@ -205,8 +205,8 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                     ; Note ;
 +------------+-----------------+--------------------------------+------+
-; 136.97 MHz ; 136.97 MHz      ; CLOCK_50                       ;      ;
-; 297.35 MHz ; 297.35 MHz      ; avconf:av_config|mI2C_CTRL_CLK ;      ;
+; 167.28 MHz ; 167.28 MHz      ; CLOCK_50                       ;      ;
+; 291.72 MHz ; 291.72 MHz      ; avconf:av_config|mI2C_CTRL_CLK ;      ;
 +------------+-----------------+--------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -216,8 +216,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLOCK_50                       ; -3.977 ; -3.977        ;
-; avconf:av_config|mI2C_CTRL_CLK ; -2.363 ; -132.324      ;
+; CLOCK_50                       ; -3.741 ; -3.741        ;
+; avconf:av_config|mI2C_CTRL_CLK ; -2.428 ; -125.769      ;
 +--------------------------------+--------+---------------+
 
 
@@ -226,8 +226,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; CLOCK_50                       ; 0.222 ; 0.000         ;
-; avconf:av_config|mI2C_CTRL_CLK ; 0.440 ; 0.000         ;
+; CLOCK_50                       ; 0.206 ; 0.000         ;
+; avconf:av_config|mI2C_CTRL_CLK ; 0.447 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -248,9 +248,9 @@ No paths to report.
 +--------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------------------------------+--------+---------------+
-; avconf:av_config|mI2C_CTRL_CLK                                                             ; -0.394 ; -36.518       ;
+; avconf:av_config|mI2C_CTRL_CLK                                                             ; -0.394 ; -36.636       ;
 ; processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                                   ; 8.822  ; 0.000         ;
+; CLOCK_50                                                                                   ; 8.819  ; 0.000         ;
 +--------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -265,8 +265,8 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLOCK_50                       ; -3.293 ; -3.293        ;
-; avconf:av_config|mI2C_CTRL_CLK ; -1.096 ; -59.340       ;
+; CLOCK_50                       ; -3.110 ; -3.110        ;
+; avconf:av_config|mI2C_CTRL_CLK ; -1.122 ; -55.737       ;
 +--------------------------------+--------+---------------+
 
 
@@ -275,8 +275,8 @@ No synchronizer chains to report.
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; CLOCK_50                       ; 0.133 ; 0.000         ;
-; avconf:av_config|mI2C_CTRL_CLK ; 0.164 ; 0.000         ;
+; CLOCK_50                       ; 0.129 ; 0.000         ;
+; avconf:av_config|mI2C_CTRL_CLK ; 0.163 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -292,15 +292,15 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Minimum Pulse Width Summary                                                                   ;
-+--------------------------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                                      ; Slack  ; End Point TNS ;
-+--------------------------------------------------------------------------------------------+--------+---------------+
-; avconf:av_config|mI2C_CTRL_CLK                                                             ; -0.001 ; -0.002        ;
-; processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.666  ; 0.000         ;
-; CLOCK_50                                                                                   ; 8.782  ; 0.000         ;
-+--------------------------------------------------------------------------------------------+--------+---------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                                                                  ;
++--------------------------------------------------------------------------------------------+-------+---------------+
+; Clock                                                                                      ; Slack ; End Point TNS ;
++--------------------------------------------------------------------------------------------+-------+---------------+
+; avconf:av_config|mI2C_CTRL_CLK                                                             ; 0.088 ; 0.000         ;
+; processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.666 ; 0.000         ;
+; CLOCK_50                                                                                   ; 8.790 ; 0.000         ;
++--------------------------------------------------------------------------------------------+-------+---------------+
 
 
 -----------------------------------------------
@@ -314,8 +314,8 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLOCK_50                       ; -2.757 ; -2.757        ;
-; avconf:av_config|mI2C_CTRL_CLK ; -0.974 ; -50.933       ;
+; CLOCK_50                       ; -2.617 ; -2.617        ;
+; avconf:av_config|mI2C_CTRL_CLK ; -1.006 ; -47.764       ;
 +--------------------------------+--------+---------------+
 
 
@@ -324,8 +324,8 @@ No synchronizer chains to report.
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
-; CLOCK_50                       ; 0.124 ; 0.000         ;
-; avconf:av_config|mI2C_CTRL_CLK ; 0.149 ; 0.000         ;
+; CLOCK_50                       ; 0.118 ; 0.000         ;
+; avconf:av_config|mI2C_CTRL_CLK ; 0.150 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -346,9 +346,9 @@ No paths to report.
 +--------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                      ; Slack ; End Point TNS ;
 +--------------------------------------------------------------------------------------------+-------+---------------+
-; avconf:av_config|mI2C_CTRL_CLK                                                             ; 0.026 ; 0.000         ;
+; avconf:av_config|mI2C_CTRL_CLK                                                             ; 0.103 ; 0.000         ;
 ; processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; 1.666 ; 0.000         ;
-; CLOCK_50                                                                                   ; 8.777 ; 0.000         ;
+; CLOCK_50                                                                                   ; 8.785 ; 0.000         ;
 +--------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -363,13 +363,13 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                                                                       ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                                            ; -4.166   ; 0.124 ; N/A      ; N/A     ; -0.394              ;
-;  CLOCK_50                                                                                   ; -4.166   ; 0.124 ; N/A      ; N/A     ; 8.777               ;
-;  avconf:av_config|mI2C_CTRL_CLK                                                             ; -2.383   ; 0.149 ; N/A      ; N/A     ; -0.394              ;
+; Worst-case Slack                                                                            ; -3.856   ; 0.118 ; N/A      ; N/A     ; -0.394              ;
+;  CLOCK_50                                                                                   ; -3.856   ; 0.118 ; N/A      ; N/A     ; 8.785               ;
+;  avconf:av_config|mI2C_CTRL_CLK                                                             ; -2.431   ; 0.150 ; N/A      ; N/A     ; -0.394              ;
 ;  processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; N/A      ; N/A   ; N/A      ; N/A     ; 1.666               ;
-; Design-wide TNS                                                                             ; -140.628 ; 0.0   ; 0.0      ; 0.0     ; -36.633             ;
-;  CLOCK_50                                                                                   ; -4.166   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  avconf:av_config|mI2C_CTRL_CLK                                                             ; -136.462 ; 0.000 ; N/A      ; N/A     ; -36.633             ;
+; Design-wide TNS                                                                             ; -134.49  ; 0.0   ; 0.0      ; 0.0     ; -36.901             ;
+;  CLOCK_50                                                                                   ; -3.856   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  avconf:av_config|mI2C_CTRL_CLK                                                             ; -130.634 ; 0.000 ; N/A      ; N/A     ; -36.901             ;
 ;  processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] ; N/A      ; N/A   ; N/A      ; N/A     ; 0.000               ;
 +---------------------------------------------------------------------------------------------+----------+-------+----------+---------+---------------------+
 
@@ -434,12 +434,12 @@ No synchronizer chains to report.
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AUD_XCK       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; AUD_ADCLRCLK  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; PS2_CLK       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; PS2_DAT       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; FPGA_I2C_SDAT ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AUD_BCLK      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AUD_ADCLRCK   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; AUD_DACLRCK   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; PS2_CLK       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; PS2_DAT       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
@@ -448,6 +448,11 @@ No synchronizer chains to report.
 +---------------+--------------+-----------------+-----------------+
 ; Pin           ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------+--------------+-----------------+-----------------+
+; SW[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[2]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[3]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[4]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[5]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[7]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -456,20 +461,15 @@ No synchronizer chains to report.
 ; KEY[2]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[3]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; AUD_ADCDAT    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; AUD_ADCLRCLK  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; PS2_CLK       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; PS2_DAT       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; FPGA_I2C_SDAT ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; AUD_BCLK      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; AUD_ADCLRCK   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; AUD_DACLRCK   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PS2_CLK       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PS2_DAT       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[0]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; CLOCK_50      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[6]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[2]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[3]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[4]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +---------------+--------------+-----------------+-----------------+
 
 
@@ -533,12 +533,12 @@ No synchronizer chains to report.
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; AUD_ADCLRCLK  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
-; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; FPGA_I2C_SDAT ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
 ; AUD_BCLK      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; AUD_ADCLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; AUD_DACLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -602,12 +602,12 @@ No synchronizer chains to report.
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; AUD_ADCLRCLK  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
-; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; FPGA_I2C_SDAT ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
 ; AUD_BCLK      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; AUD_ADCLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; AUD_DACLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -671,12 +671,12 @@ No synchronizer chains to report.
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; AUD_ADCLRCLK  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; FPGA_I2C_SDAT ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; AUD_BCLK      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; AUD_ADCLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; AUD_DACLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -740,12 +740,12 @@ No synchronizer chains to report.
 ; FPGA_I2C_SCLK ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; AUD_XCK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; AUD_DACDAT    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; AUD_ADCLRCLK  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; FPGA_I2C_SDAT ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; AUD_BCLK      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; AUD_ADCLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; AUD_DACLRCK   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; PS2_CLK       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; PS2_DAT       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -754,9 +754,9 @@ No synchronizer chains to report.
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
-; avconf:av_config|mI2C_CTRL_CLK ; avconf:av_config|mI2C_CTRL_CLK ; 775      ; 0        ; 0        ; 0        ;
+; avconf:av_config|mI2C_CTRL_CLK ; avconf:av_config|mI2C_CTRL_CLK ; 777      ; 0        ; 0        ; 0        ;
 ; avconf:av_config|mI2C_CTRL_CLK ; CLOCK_50                       ; 1        ; 1        ; 0        ; 0        ;
-; CLOCK_50                       ; CLOCK_50                       ; 3734     ; 0        ; 0        ; 0        ;
+; CLOCK_50                       ; CLOCK_50                       ; 4311     ; 0        ; 0        ; 0        ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -766,9 +766,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
-; avconf:av_config|mI2C_CTRL_CLK ; avconf:av_config|mI2C_CTRL_CLK ; 775      ; 0        ; 0        ; 0        ;
+; avconf:av_config|mI2C_CTRL_CLK ; avconf:av_config|mI2C_CTRL_CLK ; 777      ; 0        ; 0        ; 0        ;
 ; avconf:av_config|mI2C_CTRL_CLK ; CLOCK_50                       ; 1        ; 1        ; 0        ; 0        ;
-; CLOCK_50                       ; CLOCK_50                       ; 3734     ; 0        ; 0        ; 0        ;
+; CLOCK_50                       ; CLOCK_50                       ; 4311     ; 0        ; 0        ; 0        ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -792,10 +792,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 10    ; 10   ;
-; Unconstrained Input Port Paths  ; 696   ; 696  ;
-; Unconstrained Output Ports      ; 4     ; 4    ;
-; Unconstrained Output Port Paths ; 11    ; 11   ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 370   ; 370  ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 18    ; 18   ;
 +---------------------------------+-------+------+
 
 
@@ -820,11 +820,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; AUD_DACLRCK   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; FPGA_I2C_SDAT ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[0]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[1]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[2]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[3]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[4]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PS2_CLK       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[6]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+--------------------------------------------------------------------------------------+
 
@@ -838,6 +834,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; AUD_XCK       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; FPGA_I2C_SCLK ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; FPGA_I2C_SDAT ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PS2_CLK       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PS2_DAT       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+---------------------------------------------------------------------------------------+
 
 
@@ -850,11 +848,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; AUD_DACLRCK   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; FPGA_I2C_SDAT ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; KEY[0]        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[0]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[1]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[2]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[3]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SW[4]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PS2_CLK       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[6]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+--------------------------------------------------------------------------------------+
 
@@ -868,6 +862,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; AUD_XCK       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; FPGA_I2C_SCLK ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; FPGA_I2C_SDAT ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PS2_CLK       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; PS2_DAT       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+---------------------------------------------------------------------------------------+
 
 
@@ -877,7 +873,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 12 10:16:29 2025
+    Info: Processing started: Thu Nov 13 15:57:47 2025
 Info: Command: quartus_sta synth -c synth
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
@@ -1475,22 +1471,22 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.166
+Info (332146): Worst-case setup slack is -3.856
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.166              -4.166 CLOCK_50 
-    Info (332119):    -2.383            -136.462 avconf:av_config|mI2C_CTRL_CLK 
-Info (332146): Worst-case hold slack is 0.234
+    Info (332119):    -3.856              -3.856 CLOCK_50 
+    Info (332119):    -2.431            -130.634 avconf:av_config|mI2C_CTRL_CLK 
+Info (332146): Worst-case hold slack is 0.218
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.234               0.000 CLOCK_50 
-    Info (332119):     0.424               0.000 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):     0.218               0.000 CLOCK_50 
+    Info (332119):     0.438               0.000 avconf:av_config|mI2C_CTRL_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -36.633 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):    -0.394             -36.901 avconf:av_config|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     8.868               0.000 CLOCK_50 
 Info: Analyzing Slow 1100mV 0C Model
@@ -1503,24 +1499,24 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.977
+Info (332146): Worst-case setup slack is -3.741
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.977              -3.977 CLOCK_50 
-    Info (332119):    -2.363            -132.324 avconf:av_config|mI2C_CTRL_CLK 
-Info (332146): Worst-case hold slack is 0.222
+    Info (332119):    -3.741              -3.741 CLOCK_50 
+    Info (332119):    -2.428            -125.769 avconf:av_config|mI2C_CTRL_CLK 
+Info (332146): Worst-case hold slack is 0.206
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.222               0.000 CLOCK_50 
-    Info (332119):     0.440               0.000 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):     0.206               0.000 CLOCK_50 
+    Info (332119):     0.447               0.000 avconf:av_config|mI2C_CTRL_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -36.518 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):    -0.394             -36.636 avconf:av_config|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.822               0.000 CLOCK_50 
+    Info (332119):     8.819               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1531,24 +1527,24 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.293
+Info (332146): Worst-case setup slack is -3.110
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.293              -3.293 CLOCK_50 
-    Info (332119):    -1.096             -59.340 avconf:av_config|mI2C_CTRL_CLK 
-Info (332146): Worst-case hold slack is 0.133
+    Info (332119):    -3.110              -3.110 CLOCK_50 
+    Info (332119):    -1.122             -55.737 avconf:av_config|mI2C_CTRL_CLK 
+Info (332146): Worst-case hold slack is 0.129
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.133               0.000 CLOCK_50 
-    Info (332119):     0.164               0.000 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):     0.129               0.000 CLOCK_50 
+    Info (332119):     0.163               0.000 avconf:av_config|mI2C_CTRL_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.001
+Info (332146): Worst-case minimum pulse width slack is 0.088
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.001              -0.002 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):     0.088               0.000 avconf:av_config|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.782               0.000 CLOCK_50 
+    Info (332119):     8.790               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -1557,29 +1553,29 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.757
+Info (332146): Worst-case setup slack is -2.617
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.757              -2.757 CLOCK_50 
-    Info (332119):    -0.974             -50.933 avconf:av_config|mI2C_CTRL_CLK 
-Info (332146): Worst-case hold slack is 0.124
+    Info (332119):    -2.617              -2.617 CLOCK_50 
+    Info (332119):    -1.006             -47.764 avconf:av_config|mI2C_CTRL_CLK 
+Info (332146): Worst-case hold slack is 0.118
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.124               0.000 CLOCK_50 
-    Info (332119):     0.149               0.000 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):     0.118               0.000 CLOCK_50 
+    Info (332119):     0.150               0.000 avconf:av_config|mI2C_CTRL_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 0.026
+Info (332146): Worst-case minimum pulse width slack is 0.103
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.026               0.000 avconf:av_config|mI2C_CTRL_CLK 
+    Info (332119):     0.103               0.000 avconf:av_config|mI2C_CTRL_CLK 
     Info (332119):     1.666               0.000 processor|Audio_Clock|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.777               0.000 CLOCK_50 
+    Info (332119):     8.785               0.000 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 578 warnings
     Info: Peak virtual memory: 5344 megabytes
-    Info: Processing ended: Wed Nov 12 10:16:34 2025
+    Info: Processing ended: Thu Nov 13 15:57:52 2025
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 

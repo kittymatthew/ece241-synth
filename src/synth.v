@@ -13,7 +13,7 @@ module synth (
     FPGA_I2C_SCLK,
     AUD_ADCDAT, // Audio Controller Module required inputs/outputs
     AUD_BCLK,
-    AUD_ADCLRCLK,
+    AUD_ADCLRCK,
     AUD_DACLRCK,
     AUD_XCK,
     AUD_DACDAT,
@@ -32,7 +32,7 @@ module synth (
 
     input	AUD_ADCDAT; // Audio Controller Module required inputs/outputs
     inout	AUD_BCLK;
-    inout	AUD_ADCLRCLK;
+    inout	AUD_ADCLRCK;
     inout	AUD_DACLRCK;
     output	AUD_XCK;
     output	AUD_DACDAT;
@@ -48,11 +48,14 @@ module synth (
     wire audio_out_allowed;
     wire [31:0] left_unused, right_unused; 
     wire audio_in_unused;
+    wire sent_enable;
+    wire keyboard_input;
+    wire unused;
 
     // Static assignments
     assign reset = !KEY[0];
     assign enable = SW[6];
-    assign NOTE [4:0] = SW[4:0];
+    //assign NOTE [4:0] = SW[4:0];
 
     parameter tSINE = 3'b000, tSQUARE = 3'b001, tSAW = 3'b010;
 
@@ -61,6 +64,6 @@ module synth (
     Audio_Controller processor  (CLOCK_50, reset, 1'b0, 1'b0, 1'b0, AUDIO_OUT, AUDIO_OUT, // Output the same signal to the left and right channels
                                 enable, AUD_ADCDAT, AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, left_unused, // Audio inputs are not used
                                 right_unused, audio_in_unused, audio_out_allowed, AUD_XCK, AUD_DACDAT);
-    PS2_Controller keyboard(CLOCK_50, reset, 8'b0, 1'b0, PS2_CLK, PS2_DAT, , ,keyboard_input, sent_enable); 
-    keyboard_transfer decoder(CLOCK_50, reset, keyboard_input, sent_enable, dataout);
+    PS2_Controller keyboard(CLOCK_50, reset, 8'b0, 1'b0, PS2_CLK, PS2_DAT, unused, unused, keyboard_input, sent_enable); 
+    keyboard_transfer decoder(CLOCK_50, reset, keyboard_input, sent_enable, NOTE);
 endmodule
