@@ -1,10 +1,10 @@
-module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_enable, note_out)
+module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_enable, note_out);
     input clock, reset; 
     input [7:0]data_to_be_transferred; 
     input data_transfered_enable;
     reg [4:0]buffer;
     output reg [4:0] note_out;
-    parameter: A=8'h1A, S=8'h1B, X=8'h22, D=8'h23, C=8'h21, V=8'h2A, G=8'h34, B=8'h32 , H=8'h33, N=8'h31 ,J=8'h3B, M=8'h3A, Q= 8'h15, 2= 8'h1E, W=8'h1D , 3=8'h26, E=8'h24 , R=8'h2D,5=8'h2E, T=8'h2C, 6=8'h36,Y=8'h35,7=8'h3D,U=8'h3C,I=8'h43;
+    parameter A=8'h1A, S=8'h1B, X=8'h22, D=8'h23, C=8'h21, V=8'h2A, G=8'h34, B=8'h32 , H=8'h33, N=8'h31 ,J=8'h3B, M=8'h3A, Q= 8'h15, key_2= 8'h1E, W=8'h1D , key_3=8'h26, E=8'h24 , R=8'h2D, key_5=8'h2E, T=8'h2C, key_6=8'h36,Y=8'h35,key_7=8'h3D,U=8'h3C,I=8'h43;
     parameter C_note = 5'b00001;
     parameter Csharp_note = 5'b00010;
     parameter D_note = 5'b00011;
@@ -33,10 +33,10 @@ module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_e
 
     always@(*)
         begin
-            case(data_to_be_transferred):
+            case(data_to_be_transferred)
                 A: buffer=C_note; 
                 S: buffer=Csharp_note; 
-                X: bffer=D_note; 
+                X: buffer=D_note; 
                 D: buffer=Dsharp_note; 
                 C: buffer=E_note; 
                 V: buffer=F_note; 
@@ -47,27 +47,27 @@ module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_e
                 J: buffer=Asharp_note; 
                 M: buffer=B_note; 
                 Q: buffer=C2_note; 
-                2: buffer=Csharp2_note; 
+                key_2: buffer=Csharp2_note; 
                 W: buffer=D2_note; 
-                3: buffer=Dsharp2_note; 
+                key_3: buffer=Dsharp2_note; 
                 E: buffer=E2_note; 
                 R: buffer=F2_note; 
-                5: buffer=Fsharp2_note; 
+                key_5: buffer=Fsharp2_note; 
                 T: buffer=G2_note; 
-                6: buffer=Gsharp2_note; 
+                key_6: buffer=Gsharp2_note; 
                 Y: buffer=A2_note; 
-                7: buffer=Asharp2_note; 
+                key_7: buffer=Asharp2_note; 
                 U: buffer=B2_note; 
                 I: buffer=C3_note; 
                 default: buffer=5'b00000;
         endcase
     end
-    always@(posedge CLOCK_50)
+    always@(posedge clock)
     begin
         if(reset)begin
             note_out<=0; 
         end
-        else if(data_transfered_enable)begin 
+        else if(data_transfered_enable) begin 
             note_out<=buffer;
         end
     end
