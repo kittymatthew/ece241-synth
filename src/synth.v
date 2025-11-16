@@ -66,5 +66,5 @@ module synth (
                                 enable, AUD_ADCDAT, AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, left_unused, // Audio inputs are not used
                                 right_unused, audio_in_unused, audio_out_allowed, AUD_XCK, AUD_DACDAT);
     PS2_Controller keyboard(CLOCK_50, reset, 8'b0, 1'b0, PS2_CLK, PS2_DAT, unused, unused2, keyboard_input, sent_enable); 
-    keyboard_transfer decoder(CLOCK_50, reset, keyboard_input, 1'b1, NOTE);
+    keyboard_transfer decoder(CLOCK_50, reset, keyboard_input, sent_enable, NOTE);
 endmodule
