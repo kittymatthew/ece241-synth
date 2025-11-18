@@ -1,6 +1,7 @@
-module waveform_gen (TYPE, NOTE, OUT, clock, enable, reset);
+module waveform_gen (TYPE, NOTE, AMPLITUDE, OUT, clock, enable, reset);
     input [2:0] TYPE;
     input [4:0] NOTE;
+    input [31:0] AMPLITUDE;
     input clock, enable, reset;
 
     wire [31:0] SINE, SQUARE, SAW;
@@ -8,7 +9,7 @@ module waveform_gen (TYPE, NOTE, OUT, clock, enable, reset);
     output reg [31:0] OUT;
 
     sine_gen sine_generator (NOTE, SINE, clock, reset);
-    square_gen square_gen (NOTE, SQUARE, clock, reset);
+    square_gen square_gen (NOTE, SQUARE, AMPLITUDE, clock, reset);
     saw_gen saw_gen (NOTE, SAW, clock, reset);
 
     parameter tSINE = 3'b000, tSQUARE = 3'b001, tSAW = 3'b010;
@@ -75,6 +76,8 @@ module sine_gen (NOTE, OUT, clock, reset);
     parameter Asharp2 = 5'b10111;
     parameter B2 = 5'b11000;
     parameter C3 = 5'b11001;
+    parameter SLOW = 5'b11100;
+    parameter FAST = 5'b11101;
 
     /* 
         The frequency we output is determined based on how 'fast' we traverse through the sine wave.
@@ -131,11 +134,95 @@ module sine_gen (NOTE, OUT, clock, reset);
 endmodule
 
 // Square wave generator - will be implemented later, time permitting
-module square_gen (FREQUENCY, OUT, clock, reset);
-    input [4:0] FREQUENCY;
+module square_gen (NOTE, OUT, AMPLITUDE, clock, reset);
+    input [4:0] NOTE;
+    input [31:0] AMPLITUDE;
     input clock, reset;
 
-    output [31:0] OUT;
+    output reg [31:0] OUT;
+
+    reg [31:0] COUNT, TRACKER;
+
+    parameter C = 5'b00001;
+    parameter Csharp = 5'b00010;
+    parameter D = 5'b00011;
+    parameter Dsharp = 5'b00100;
+    parameter E = 5'b00101;
+    parameter F = 5'b00110;
+    parameter Fsharp = 5'b00111;
+    parameter G = 5'b01000;
+    parameter Gsharp = 5'b01001;
+    parameter A = 5'b01010;
+    parameter Asharp = 5'b01011;
+    parameter B = 5'b01100;
+    parameter C2 = 5'b01101;
+    parameter Csharp2 = 5'b01110;
+    parameter D2 = 5'b01111;
+    parameter Dsharp2 = 5'b10000;
+    parameter E2 = 5'b10001;
+    parameter F2 = 5'b10010;
+    parameter Fsharp2 = 5'b10011;
+    parameter G2 = 5'b10100;
+    parameter Gsharp2 = 5'b10101;
+    parameter A2 = 5'b10110;
+    parameter Asharp2 = 5'b10111;
+    parameter B2 = 5'b11000;
+    parameter C3 = 5'b11001;
+    parameter SLOW = 5'b11100;
+    parameter FAST = 5'b11101;
+
+    // We want to toggle the square wave every (F_Clock)/(F_Target) cycles of the clock
+    // Again, we need to precompute to avoid division
+
+    always @ (*) begin
+        case (NOTE)
+            C:       COUNT = 32'd191109; // 261.63 Hz
+            Csharp:  COUNT = 32'd180388; // 277.18 Hz
+            D:       COUNT = 32'd170265; // 293.66 Hz
+            Dsharp:  COUNT = 32'd160704; // 311.13 Hz
+            E:       COUNT = 32'd151685; // 329.63 Hz
+            F:       COUNT = 32'd143172; // 349.23 Hz
+            Fsharp:  COUNT = 32'd135139; // 369.99 Hz
+            G:       COUNT = 32'd127551; // 392.00 Hz
+            Gsharp:  COUNT = 32'd120395; // 415.30 Hz
+            A:       COUNT = 32'd113636; // 440.00 Hz
+            Asharp:  COUNT = 32'd107259; // 466.16 Hz
+            B:       COUNT = 32'd101239; // 493.88 Hz
+            C2:      COUNT = 32'd95557; // 523.25 Hz
+            Csharp2: COUNT = 32'd90192; // 554.37 Hz
+            D2:      COUNT = 32'd85131; // 587.33 Hz
+            Dsharp2: COUNT = 32'd80353; // 622.25 Hz
+            E2:      COUNT = 32'd75843; // 659.26 Hz
+            F2:      COUNT = 32'd71586; // 698.46 Hz
+            Fsharp2: COUNT = 32'd67568; // 739.99 Hz
+            G2:      COUNT = 32'd67344; // 783.99 Hz
+            Gsharp2: COUNT = 32'd60197; // 830.61 Hz
+            A2:      COUNT = 32'd56818; // 880.00 Hz
+            Asharp2: COUNT = 32'd53629; // 932.33 Hz
+            B2:      COUNT = 32'd50619; // 987.77 Hz
+            C3:      COUNT = 32'd47774; // 1046.59 Hz
+            SLOW:    COUNT = 32'd50000000; // 1 Hz
+            FAST:    COUNT = 32'd10000000; // 5 Hz
+            default: COUNT = 32'd0;
+        endcase
+    end
+
+    always @ (posedge clock, posedge reset) begin
+        if (reset) begin // Reset the signals on reset
+            TRACKER <= 32'b0; 
+            OUT <= 32'b0; 
+        end else if (TRACKER == COUNT) begin
+            if (OUT != 32'b0) begin
+                OUT <= 32'b0;
+            end else begin
+                OUT <= AMPLITUDE;
+            end
+            TRACKER <= 32'b0;
+        end else begin
+            TRACKER <= TRACKER + 1;
+        end
+    end
+
 endmodule
 
 // Sawtooth wave generator - will be implmented later, time permitting

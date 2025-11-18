@@ -1,5 +1,5 @@
 Analysis & Synthesis report for synth
-Thu Nov 13 16:14:19 2025
+Tue Nov 18 13:08:00 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -28,41 +28,47 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  20. Source assignments for Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
  21. Source assignments for Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
  22. Source assignments for Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram
- 23. Source assignments for waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated
- 24. Parameter Settings for User Entity Instance: Top-level Entity: |synth
- 25. Parameter Settings for User Entity Instance: avconf:av_config
- 26. Parameter Settings for User Entity Instance: waveform_gen:sine_gen
- 27. Parameter Settings for User Entity Instance: waveform_gen:sine_gen|sine_gen:sine_generator
- 28. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
- 29. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
- 30. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
- 31. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
- 32. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
- 33. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
- 34. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
- 35. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
- 36. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
- 37. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
- 38. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
- 39. Parameter Settings for User Entity Instance: Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component
- 40. Parameter Settings for User Entity Instance: PS2_Controller:keyboard
- 41. Parameter Settings for User Entity Instance: PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out
- 42. Parameter Settings for User Entity Instance: keyboard_transfer:decoder
- 43. Parameter Settings for Inferred Entity Instance: waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0
- 44. scfifo Parameter Settings by Entity Instance
- 45. altpll Parameter Settings by Entity Instance
- 46. altsyncram Parameter Settings by Entity Instance
- 47. Port Connectivity Checks: "keyboard_transfer:decoder"
- 48. Port Connectivity Checks: "PS2_Controller:keyboard"
- 49. Port Connectivity Checks: "Audio_Controller:processor|Audio_Clock:Audio_Clock"
- 50. Port Connectivity Checks: "Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
- 51. Port Connectivity Checks: "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
- 52. Port Connectivity Checks: "Audio_Controller:processor"
- 53. Port Connectivity Checks: "waveform_gen:sine_gen"
- 54. Port Connectivity Checks: "avconf:av_config|I2C_Controller:u0"
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
+ 23. Source assignments for waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated
+ 24. Source assignments for waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated
+ 25. Parameter Settings for User Entity Instance: Top-level Entity: |synth
+ 26. Parameter Settings for User Entity Instance: avconf:av_config
+ 27. Parameter Settings for User Entity Instance: waveform_gen:wave_gen
+ 28. Parameter Settings for User Entity Instance: waveform_gen:wave_gen|sine_gen:sine_generator
+ 29. Parameter Settings for User Entity Instance: waveform_gen:wave_gen|square_gen:square_gen
+ 30. Parameter Settings for User Entity Instance: waveform_gen:wave_gen2
+ 31. Parameter Settings for User Entity Instance: waveform_gen:wave_gen2|sine_gen:sine_generator
+ 32. Parameter Settings for User Entity Instance: waveform_gen:wave_gen2|square_gen:square_gen
+ 33. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
+ 34. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
+ 35. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
+ 36. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 37. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
+ 38. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 39. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
+ 40. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
+ 41. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 42. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
+ 43. Parameter Settings for User Entity Instance: Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 44. Parameter Settings for User Entity Instance: Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component
+ 45. Parameter Settings for User Entity Instance: PS2_Controller:keyboard
+ 46. Parameter Settings for User Entity Instance: PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out
+ 47. Parameter Settings for User Entity Instance: keyboard_transfer:decoder
+ 48. Parameter Settings for Inferred Entity Instance: waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0
+ 49. Parameter Settings for Inferred Entity Instance: waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0
+ 50. scfifo Parameter Settings by Entity Instance
+ 51. altpll Parameter Settings by Entity Instance
+ 52. altsyncram Parameter Settings by Entity Instance
+ 53. Port Connectivity Checks: "PS2_Controller:keyboard"
+ 54. Port Connectivity Checks: "Audio_Controller:processor|Audio_Clock:Audio_Clock"
+ 55. Port Connectivity Checks: "Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
+ 56. Port Connectivity Checks: "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
+ 57. Port Connectivity Checks: "Audio_Controller:processor"
+ 58. Port Connectivity Checks: "waveform_gen:wave_gen2"
+ 59. Port Connectivity Checks: "waveform_gen:wave_gen"
+ 60. Port Connectivity Checks: "avconf:av_config|I2C_Controller:u0"
+ 61. Post-Synthesis Netlist Statistics for Top Partition
+ 62. Elapsed Time Per Partition
+ 63. Analysis & Synthesis Messages
 
 
 
@@ -88,16 +94,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 13 16:14:19 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 18 13:07:59 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; synth                                       ;
 ; Top-level Entity Name           ; synth                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 345                                         ;
+; Total registers                 ; 442                                         ;
 ; Total pins                      ; 77                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 40,960                                      ;
+; Total block memory bits         ; 41,024                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -209,7 +215,10 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processors 6-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -271,20 +280,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 274            ;
+; Estimate of Logic utilization (ALMs needed) ; 349            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 453            ;
-;     -- 7 input functions                    ; 4              ;
-;     -- 6 input functions                    ; 86             ;
-;     -- 5 input functions                    ; 100            ;
-;     -- 4 input functions                    ; 34             ;
-;     -- <=3 input functions                  ; 229            ;
+; Combinational ALUT usage for logic          ; 585            ;
+;     -- 7 input functions                    ; 3              ;
+;     -- 6 input functions                    ; 105            ;
+;     -- 5 input functions                    ; 115            ;
+;     -- 4 input functions                    ; 35             ;
+;     -- <=3 input functions                  ; 327            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 345            ;
+; Dedicated logic registers                   ; 442            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 77             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 40960          ;
+; Total block memory bits                     ; 41024          ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
@@ -292,9 +301,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 384            ;
-; Total fan-out                               ; 4399           ;
-; Average fan-out                             ; 4.17           ;
+; Maximum fan-out                             ; 513            ;
+; Total fan-out                               ; 5362           ;
+; Average fan-out                             ; 4.07           ;
 +---------------------------------------------+----------------+
 
 
@@ -303,7 +312,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node                                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                             ; Entity Name                    ; Library Name ;
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
-; |synth                                                      ; 453 (0)             ; 345 (0)                   ; 40960             ; 0          ; 77   ; 0            ; |synth                                                                                                                                                                                                                          ; synth                          ; work         ;
+; |synth                                                      ; 585 (1)             ; 442 (0)                   ; 41024             ; 0          ; 77   ; 0            ; |synth                                                                                                                                                                                                                          ; synth                          ; work         ;
 ;    |Audio_Controller:processor|                             ; 152 (2)             ; 110 (2)                   ; 8192              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor                                                                                                                                                                                               ; Audio_Controller               ; work         ;
 ;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer| ; 149 (55)            ; 104 (38)                  ; 8192              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                           ; Altera_UP_Audio_Out_Serializer ; work         ;
 ;          |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|  ; 47 (0)              ; 33 (0)                    ; 4096              ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO            ; work         ;
@@ -327,16 +336,21 @@ refer to the applicable agreement for further details.
 ;       |Audio_Clock:Audio_Clock|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Audio_Clock:Audio_Clock                                                                                                                                                                       ; Audio_Clock                    ; work         ;
 ;          |altpll:altpll_component|                          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component                                                                                                                                               ; altpll                         ; work         ;
 ;             |Audio_Clock_altpll:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated                                                                                                             ; Audio_Clock_altpll             ; work         ;
-;    |PS2_Controller:keyboard|                                ; 108 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard                                                                                                                                                                                                  ; PS2_Controller                 ; work         ;
-;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 86 (86)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                        ; Altera_UP_PS2_Command_Out      ; work         ;
+;    |PS2_Controller:keyboard|                                ; 106 (6)             ; 90 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard                                                                                                                                                                                                  ; PS2_Controller                 ; work         ;
+;       |Altera_UP_PS2_Command_Out:PS2_Command_Out|           ; 84 (84)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out                                                                                                                                                        ; Altera_UP_PS2_Command_Out      ; work         ;
 ;       |Altera_UP_PS2_Data_In:PS2_Data_In|                   ; 16 (16)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In                                                                                                                                                                ; Altera_UP_PS2_Data_In          ; work         ;
 ;    |avconf:av_config|                                       ; 97 (53)             ; 75 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|avconf:av_config                                                                                                                                                                                                         ; avconf                         ; work         ;
 ;       |I2C_Controller:u0|                                   ; 44 (44)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|avconf:av_config|I2C_Controller:u0                                                                                                                                                                                       ; I2C_Controller                 ; work         ;
 ;    |keyboard_transfer:decoder|                              ; 17 (17)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |synth|keyboard_transfer:decoder                                                                                                                                                                                                ; keyboard_transfer              ; work         ;
-;    |waveform_gen:sine_gen|                                  ; 79 (0)              ; 65 (32)                   ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen                                                                                                                                                                                                    ; waveform_gen                   ; work         ;
-;       |sine_gen:sine_generator|                             ; 79 (79)             ; 33 (33)                   ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator                                                                                                                                                                            ; sine_gen                       ; work         ;
-;          |altsyncram:SINE_LUT_rtl_0|                        ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0                                                                                                                                                  ; altsyncram                     ; work         ;
-;             |altsyncram_o7d1:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated                                                                                                                   ; altsyncram_o7d1                ; work         ;
+;    |waveform_gen:wave_gen2|                                 ; 32 (0)              ; 33 (32)                   ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen2                                                                                                                                                                                                   ; waveform_gen                   ; work         ;
+;       |sine_gen:sine_generator|                             ; 32 (32)             ; 1 (1)                     ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen2|sine_gen:sine_generator                                                                                                                                                                           ; sine_gen                       ; work         ;
+;          |altsyncram:SINE_LUT_rtl_0|                        ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0                                                                                                                                                 ; altsyncram                     ; work         ;
+;             |altsyncram_o7d1:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated                                                                                                                  ; altsyncram_o7d1                ; work         ;
+;    |waveform_gen:wave_gen|                                  ; 180 (0)             ; 129 (32)                  ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen                                                                                                                                                                                                    ; waveform_gen                   ; work         ;
+;       |sine_gen:sine_generator|                             ; 79 (79)             ; 33 (33)                   ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen|sine_gen:sine_generator                                                                                                                                                                            ; sine_gen                       ; work         ;
+;          |altsyncram:SINE_LUT_rtl_0|                        ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0                                                                                                                                                  ; altsyncram                     ; work         ;
+;             |altsyncram_o7d1:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated                                                                                                                   ; altsyncram_o7d1                ; work         ;
+;       |square_gen:square_gen|                               ; 101 (101)           ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |synth|waveform_gen:wave_gen|square_gen:square_gen                                                                                                                                                                              ; square_gen                     ; work         ;
 +-------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -348,7 +362,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------------------------------+
 ; Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096  ; None                                    ;
 ; Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096  ; None                                    ;
-; waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated|ALTSYNCRAM                                                                                                                   ; AUTO ; ROM              ; 1024         ; 32           ; --           ; --           ; 32768 ; db/synth.ram0_sine_gen_d6b59fd0.hdl.mif ;
+; waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated|ALTSYNCRAM                                                                                                                  ; AUTO ; ROM              ; 1024         ; 32           ; --           ; --           ; 32768 ; db/synth.ram0_sine_gen_d6b59fd0.hdl.mif ;
+; waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated|ALTSYNCRAM                                                                                                                   ; AUTO ; ROM              ; 1024         ; 32           ; --           ; --           ; 32768 ; db/synth.ram0_sine_gen_d6b59fd0.hdl.mif ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------------------------------+
 
 
@@ -419,6 +434,7 @@ Encoding Type:  One-Hot
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|right_audio_fifo_read_space[6,7]                                                                                                                              ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff                                     ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|empty_dff                                    ; Lost fanout                                                                                  ;
+; waveform_gen:wave_gen2|square_gen:square_gen|OUT[0..8,10..19,21..30]                                                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|idle_counter[0..7]                                                                                                                                                                                                     ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|done_adc_channel_sync                                                                                                                                                                                               ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[1..32]                                                                                                                                      ; Lost fanout                                                                                  ;
@@ -444,12 +460,16 @@ Encoding Type:  One-Hot
 ; Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[0..4]                                                                                           ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges|last_test_clk                                                                                                                                                       ; Lost fanout                                                                                  ;
 ; Audio_Controller:processor|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges|cur_test_clk                                                                                                                                                        ; Lost fanout                                                                                  ;
+; waveform_gen:wave_gen2|square_gen:square_gen|TRACKER[0..31]                                                                                                                                                                                    ; Lost fanout                                                                                  ;
+; waveform_gen:wave_gen2|square_gen:square_gen|OUT[9,20,31]                                                                                                                                                                                      ; Lost fanout                                                                                  ;
 ; avconf:av_config|mI2C_DATA[16,17,19,23]                                                                                                                                                                                                        ; Stuck at GND due to stuck port data_in                                                       ;
 ; avconf:av_config|I2C_Controller:u0|SD[16,17,19,23]                                                                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[1..7]                                                                                                                                                            ; Merged with PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0] ;
 ; avconf:av_config|I2C_Controller:u0|SD[20,21]                                                                                                                                                                                                   ; Merged with avconf:av_config|I2C_Controller:u0|SD[18]                                        ;
 ; avconf:av_config|mI2C_DATA[20,21]                                                                                                                                                                                                              ; Merged with avconf:av_config|mI2C_DATA[18]                                                   ;
+; waveform_gen:wave_gen2|sine_gen:sine_generator|COUNT[0..21]                                                                                                                                                                                    ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0]                                                                                                                                                               ; Stuck at GND due to stuck port data_in                                                       ;
+; waveform_gen:wave_gen2|sine_gen:sine_generator|COUNT[22..31]                                                                                                                                                                                   ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|s_ps2_transceiver~2                                                                                                                                                                                                    ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|s_ps2_transceiver~3                                                                                                                                                                                                    ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter~2                                                                                                                                                          ; Lost fanout                                                                                  ;
@@ -461,14 +481,14 @@ Encoding Type:  One-Hot
 ; avconf:av_config|mSetup_ST~10                                                                                                                                                                                                                  ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_4_END_DELAYED                                                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                       ;
-; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                                                                                                                                                ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent                                                                                                                                                             ; Lost fanout                                                                                  ;
+; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                                                                                                                                                ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER                                                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|s_ps2_receiver.PS2_STATE_1_WAIT_FOR_DATA                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_0_IDLE                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                       ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT                                                                                                                               ; Lost fanout                                                                                  ;
 ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR                                                                                                                             ; Lost fanout                                                                                  ;
-; Total Number of Removed Registers = 158                                                                                                                                                                                                        ;                                                                                              ;
+; Total Number of Removed Registers = 254                                                                                                                                                                                                        ;                                                                                              ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
 
 
@@ -492,8 +512,8 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                                                            ;                           ; Audio_Controller:processor|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges|cur_test_clk                                                                                                                                                      ;
 ; PS2_Controller:keyboard|idle_counter[3]                                                                                                                                                                    ; Lost Fanouts              ; PS2_Controller:keyboard|idle_counter[4], PS2_Controller:keyboard|idle_counter[5],                                                                                                                                                            ;
 ;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|idle_counter[6], PS2_Controller:keyboard|idle_counter[7]                                                                                                                                                             ;
-; PS2_Controller:keyboard|s_ps2_transceiver~2                                                                                                                                                                ; Lost Fanouts              ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                                                                                                                                             ;
-;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                                                                                                                                          ;
+; PS2_Controller:keyboard|s_ps2_transceiver~2                                                                                                                                                                ; Lost Fanouts              ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_was_sent,                                                                                                                                                          ;
+;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out,                                                                                                                                             ;
 ;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_6_COMMAND_WAS_SENT,                                                                                                                            ;
 ;                                                                                                                                                                                                            ;                           ; PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_7_TRANSMISSION_ERROR                                                                                                                           ;
 ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_2_COMMAND_OUT                                                                                                                                          ; Stuck at GND              ; PS2_Controller:keyboard|s_ps2_transceiver.PS2_STATE_3_END_TRANSFER,                                                                                                                                                                          ;
@@ -515,12 +535,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 345   ;
-; Number of registers using Synchronous Clear  ; 180   ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 104   ;
+; Total registers                              ; 442   ;
+; Number of registers using Synchronous Clear  ; 244   ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 201   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 219   ;
+; Number of registers using Clock Enable       ; 288   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -531,11 +551,11 @@ Encoding Type:  One-Hot
 ; Inverted Register                                ; Fan out ;
 +--------------------------------------------------+---------+
 ; avconf:av_config|I2C_Controller:u0|SCLK          ; 2       ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[5] ; 18      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[5] ; 19      ;
 ; avconf:av_config|I2C_Controller:u0|SD_COUNTER[4] ; 22      ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[3] ; 25      ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[2] ; 22      ;
-; avconf:av_config|I2C_Controller:u0|SD_COUNTER[1] ; 19      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[3] ; 26      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[2] ; 23      ;
+; avconf:av_config|I2C_Controller:u0|SD_COUNTER[1] ; 20      ;
 ; avconf:av_config|I2C_Controller:u0|SD_COUNTER[0] ; 27      ;
 ; avconf:av_config|I2C_Controller:u0|END           ; 5       ;
 ; avconf:av_config|I2C_Controller:u0|SDO           ; 2       ;
@@ -543,30 +563,33 @@ Encoding Type:  One-Hot
 +--------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                                                   ;
-+----------------------------------------------------------+--------------------------------------------------------------+------+
-; Register Name                                            ; Megafunction                                                 ; Type ;
-+----------------------------------------------------------+--------------------------------------------------------------+------+
-; waveform_gen:sine_gen|sine_gen:sine_generator|OUT[0..31] ; waveform_gen:sine_gen|sine_gen:sine_generator|SINE_LUT_rtl_0 ; RAM  ;
-+----------------------------------------------------------+--------------------------------------------------------------+------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                                     ;
++-----------------------------------------------------------+---------------------------------------------------------------+------+
+; Register Name                                             ; Megafunction                                                  ; Type ;
++-----------------------------------------------------------+---------------------------------------------------------------+------+
+; waveform_gen:wave_gen2|sine_gen:sine_generator|OUT[0..31] ; waveform_gen:wave_gen2|sine_gen:sine_generator|SINE_LUT_rtl_0 ; RAM  ;
+; waveform_gen:wave_gen|sine_gen:sine_generator|OUT[0..31]  ; waveform_gen:wave_gen|sine_gen:sine_generator|SINE_LUT_rtl_0  ; RAM  ;
++-----------------------------------------------------------+---------------------------------------------------------------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[0]                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[0]                           ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[9]         ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[9]                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                               ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[17]                ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[29] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |synth|avconf:av_config|I2C_Controller:u0|SD_COUNTER[4]                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[7]                           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |synth|keyboard_transfer:decoder|note_out[1]                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[0]                          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |synth|waveform_gen:wave_gen|square_gen:square_gen|OUT[1]                                                   ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[7]        ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[15]                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                              ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 0 LEs                ; 34 LEs                 ; Yes        ; |synth|PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[9]                ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |synth|Audio_Controller:processor|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[4] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |synth|avconf:av_config|I2C_Controller:u0|SD_COUNTER[0]                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -605,8 +628,17 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                               ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated ;
+; Source assignments for waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                              ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------------+
@@ -661,7 +693,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: waveform_gen:sine_gen ;
+; Parameter Settings for User Entity Instance: waveform_gen:wave_gen ;
 +----------------+-------+-------------------------------------------+
 ; Parameter Name ; Value ; Type                                      ;
 +----------------+-------+-------------------------------------------+
@@ -673,7 +705,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: waveform_gen:sine_gen|sine_gen:sine_generator ;
+; Parameter Settings for User Entity Instance: waveform_gen:wave_gen|sine_gen:sine_generator ;
 +----------------+-------+-------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                              ;
 +----------------+-------+-------------------------------------------------------------------+
@@ -702,7 +734,129 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Asharp2        ; 10111 ; Unsigned Binary                                                   ;
 ; B2             ; 11000 ; Unsigned Binary                                                   ;
 ; C3             ; 11001 ; Unsigned Binary                                                   ;
+; SLOW           ; 11100 ; Unsigned Binary                                                   ;
+; FAST           ; 11101 ; Unsigned Binary                                                   ;
 +----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: waveform_gen:wave_gen|square_gen:square_gen ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; C              ; 00001 ; Unsigned Binary                                                 ;
+; Csharp         ; 00010 ; Unsigned Binary                                                 ;
+; D              ; 00011 ; Unsigned Binary                                                 ;
+; Dsharp         ; 00100 ; Unsigned Binary                                                 ;
+; E              ; 00101 ; Unsigned Binary                                                 ;
+; F              ; 00110 ; Unsigned Binary                                                 ;
+; Fsharp         ; 00111 ; Unsigned Binary                                                 ;
+; G              ; 01000 ; Unsigned Binary                                                 ;
+; Gsharp         ; 01001 ; Unsigned Binary                                                 ;
+; A              ; 01010 ; Unsigned Binary                                                 ;
+; Asharp         ; 01011 ; Unsigned Binary                                                 ;
+; B              ; 01100 ; Unsigned Binary                                                 ;
+; C2             ; 01101 ; Unsigned Binary                                                 ;
+; Csharp2        ; 01110 ; Unsigned Binary                                                 ;
+; D2             ; 01111 ; Unsigned Binary                                                 ;
+; Dsharp2        ; 10000 ; Unsigned Binary                                                 ;
+; E2             ; 10001 ; Unsigned Binary                                                 ;
+; F2             ; 10010 ; Unsigned Binary                                                 ;
+; Fsharp2        ; 10011 ; Unsigned Binary                                                 ;
+; G2             ; 10100 ; Unsigned Binary                                                 ;
+; Gsharp2        ; 10101 ; Unsigned Binary                                                 ;
+; A2             ; 10110 ; Unsigned Binary                                                 ;
+; Asharp2        ; 10111 ; Unsigned Binary                                                 ;
+; B2             ; 11000 ; Unsigned Binary                                                 ;
+; C3             ; 11001 ; Unsigned Binary                                                 ;
+; SLOW           ; 11100 ; Unsigned Binary                                                 ;
+; FAST           ; 11101 ; Unsigned Binary                                                 ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: waveform_gen:wave_gen2 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; tSINE          ; 000   ; Unsigned Binary                            ;
+; tSQUARE        ; 001   ; Unsigned Binary                            ;
+; tSAW           ; 010   ; Unsigned Binary                            ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: waveform_gen:wave_gen2|sine_gen:sine_generator ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; C              ; 00001 ; Unsigned Binary                                                    ;
+; Csharp         ; 00010 ; Unsigned Binary                                                    ;
+; D              ; 00011 ; Unsigned Binary                                                    ;
+; Dsharp         ; 00100 ; Unsigned Binary                                                    ;
+; E              ; 00101 ; Unsigned Binary                                                    ;
+; F              ; 00110 ; Unsigned Binary                                                    ;
+; Fsharp         ; 00111 ; Unsigned Binary                                                    ;
+; G              ; 01000 ; Unsigned Binary                                                    ;
+; Gsharp         ; 01001 ; Unsigned Binary                                                    ;
+; A              ; 01010 ; Unsigned Binary                                                    ;
+; Asharp         ; 01011 ; Unsigned Binary                                                    ;
+; B              ; 01100 ; Unsigned Binary                                                    ;
+; C2             ; 01101 ; Unsigned Binary                                                    ;
+; Csharp2        ; 01110 ; Unsigned Binary                                                    ;
+; D2             ; 01111 ; Unsigned Binary                                                    ;
+; Dsharp2        ; 10000 ; Unsigned Binary                                                    ;
+; E2             ; 10001 ; Unsigned Binary                                                    ;
+; F2             ; 10010 ; Unsigned Binary                                                    ;
+; Fsharp2        ; 10011 ; Unsigned Binary                                                    ;
+; G2             ; 10100 ; Unsigned Binary                                                    ;
+; Gsharp2        ; 10101 ; Unsigned Binary                                                    ;
+; A2             ; 10110 ; Unsigned Binary                                                    ;
+; Asharp2        ; 10111 ; Unsigned Binary                                                    ;
+; B2             ; 11000 ; Unsigned Binary                                                    ;
+; C3             ; 11001 ; Unsigned Binary                                                    ;
+; SLOW           ; 11100 ; Unsigned Binary                                                    ;
+; FAST           ; 11101 ; Unsigned Binary                                                    ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: waveform_gen:wave_gen2|square_gen:square_gen ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; C              ; 00001 ; Unsigned Binary                                                  ;
+; Csharp         ; 00010 ; Unsigned Binary                                                  ;
+; D              ; 00011 ; Unsigned Binary                                                  ;
+; Dsharp         ; 00100 ; Unsigned Binary                                                  ;
+; E              ; 00101 ; Unsigned Binary                                                  ;
+; F              ; 00110 ; Unsigned Binary                                                  ;
+; Fsharp         ; 00111 ; Unsigned Binary                                                  ;
+; G              ; 01000 ; Unsigned Binary                                                  ;
+; Gsharp         ; 01001 ; Unsigned Binary                                                  ;
+; A              ; 01010 ; Unsigned Binary                                                  ;
+; Asharp         ; 01011 ; Unsigned Binary                                                  ;
+; B              ; 01100 ; Unsigned Binary                                                  ;
+; C2             ; 01101 ; Unsigned Binary                                                  ;
+; Csharp2        ; 01110 ; Unsigned Binary                                                  ;
+; D2             ; 01111 ; Unsigned Binary                                                  ;
+; Dsharp2        ; 10000 ; Unsigned Binary                                                  ;
+; E2             ; 10001 ; Unsigned Binary                                                  ;
+; F2             ; 10010 ; Unsigned Binary                                                  ;
+; Fsharp2        ; 10011 ; Unsigned Binary                                                  ;
+; G2             ; 10100 ; Unsigned Binary                                                  ;
+; Gsharp2        ; 10101 ; Unsigned Binary                                                  ;
+; A2             ; 10110 ; Unsigned Binary                                                  ;
+; Asharp2        ; 10111 ; Unsigned Binary                                                  ;
+; B2             ; 11000 ; Unsigned Binary                                                  ;
+; C3             ; 11001 ; Unsigned Binary                                                  ;
+; SLOW           ; 11100 ; Unsigned Binary                                                  ;
+; FAST           ; 11101 ; Unsigned Binary                                                  ;
++----------------+-------+------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1370,8 +1524,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0 ;
++------------------------------------+-----------------------------------------+--------------------------------------------+
+; Parameter Name                     ; Value                                   ; Type                                       ;
++------------------------------------+-----------------------------------------+--------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                       ; Untyped                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                                      ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                     ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS                ; ON                                      ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                     ; IGNORE_CASCADE                             ;
+; WIDTH_BYTEENA                      ; 1                                       ; Untyped                                    ;
+; OPERATION_MODE                     ; ROM                                     ; Untyped                                    ;
+; WIDTH_A                            ; 32                                      ; Untyped                                    ;
+; WIDTHAD_A                          ; 10                                      ; Untyped                                    ;
+; NUMWORDS_A                         ; 1024                                    ; Untyped                                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED                            ; Untyped                                    ;
+; ADDRESS_ACLR_A                     ; NONE                                    ; Untyped                                    ;
+; OUTDATA_ACLR_A                     ; NONE                                    ; Untyped                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                                    ; Untyped                                    ;
+; INDATA_ACLR_A                      ; NONE                                    ; Untyped                                    ;
+; BYTEENA_ACLR_A                     ; NONE                                    ; Untyped                                    ;
+; WIDTH_B                            ; 1                                       ; Untyped                                    ;
+; WIDTHAD_B                          ; 1                                       ; Untyped                                    ;
+; NUMWORDS_B                         ; 1                                       ; Untyped                                    ;
+; INDATA_REG_B                       ; CLOCK1                                  ; Untyped                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                  ; Untyped                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1                                  ; Untyped                                    ;
+; ADDRESS_REG_B                      ; CLOCK1                                  ; Untyped                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED                            ; Untyped                                    ;
+; BYTEENA_REG_B                      ; CLOCK1                                  ; Untyped                                    ;
+; INDATA_ACLR_B                      ; NONE                                    ; Untyped                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                                    ; Untyped                                    ;
+; ADDRESS_ACLR_B                     ; NONE                                    ; Untyped                                    ;
+; OUTDATA_ACLR_B                     ; NONE                                    ; Untyped                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                                    ; Untyped                                    ;
+; BYTEENA_ACLR_B                     ; NONE                                    ; Untyped                                    ;
+; WIDTH_BYTEENA_A                    ; 1                                       ; Untyped                                    ;
+; WIDTH_BYTEENA_B                    ; 1                                       ; Untyped                                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                                    ; Untyped                                    ;
+; BYTE_SIZE                          ; 8                                       ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                    ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                    ; Untyped                                    ;
+; INIT_FILE                          ; db/synth.ram0_sine_gen_d6b59fd0.hdl.mif ; Untyped                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                  ; Untyped                                    ;
+; MAXIMUM_DEPTH                      ; 0                                       ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                  ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                  ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                  ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                  ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                         ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                         ; Untyped                                    ;
+; ENABLE_ECC                         ; FALSE                                   ; Untyped                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                   ; Untyped                                    ;
+; WIDTH_ECCSTATUS                    ; 3                                       ; Untyped                                    ;
+; DEVICE_FAMILY                      ; Cyclone V                               ; Untyped                                    ;
+; CBXI_PARAMETER                     ; altsyncram_o7d1                         ; Untyped                                    ;
++------------------------------------+-----------------------------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0 ;
+; Parameter Settings for Inferred Entity Instance: waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0 ;
 +------------------------------------+-----------------------------------------+-------------------------------------------+
 ; Parameter Name                     ; Value                                   ; Type                                      ;
 +------------------------------------+-----------------------------------------+-------------------------------------------+
@@ -1481,33 +1696,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                    ;
-+-------------------------------------------+-------------------------------------------------------------------------+
-; Name                                      ; Value                                                                   ;
-+-------------------------------------------+-------------------------------------------------------------------------+
-; Number of entity instances                ; 1                                                                       ;
-; Entity Instance                           ; waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0 ;
-;     -- OPERATION_MODE                     ; ROM                                                                     ;
-;     -- WIDTH_A                            ; 32                                                                      ;
-;     -- NUMWORDS_A                         ; 1024                                                                    ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                            ;
-;     -- WIDTH_B                            ; 1                                                                       ;
-;     -- NUMWORDS_B                         ; 1                                                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                               ;
-+-------------------------------------------+-------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "keyboard_transfer:decoder"    ;
-+------------------------+-------+----------+--------------+
-; Port                   ; Type  ; Severity ; Details      ;
-+------------------------+-------+----------+--------------+
-; data_transfered_enable ; Input ; Info     ; Stuck at VCC ;
-+------------------------+-------+----------+--------------+
++----------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                     ;
++-------------------------------------------+--------------------------------------------------------------------------+
+; Name                                      ; Value                                                                    ;
++-------------------------------------------+--------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                        ;
+; Entity Instance                           ; waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                                                      ;
+;     -- WIDTH_A                            ; 32                                                                       ;
+;     -- NUMWORDS_A                         ; 1024                                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                             ;
+;     -- WIDTH_B                            ; 1                                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                ;
+; Entity Instance                           ; waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0  ;
+;     -- OPERATION_MODE                     ; ROM                                                                      ;
+;     -- WIDTH_A                            ; 32                                                                       ;
+;     -- NUMWORDS_A                         ; 1024                                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                             ;
+;     -- WIDTH_B                            ; 1                                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                ;
++-------------------------------------------+--------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1519,7 +1736,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; send_command                  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; command_was_sent              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; error_communication_timed_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; received_data_en              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1568,13 +1784,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------+
+; Port Connectivity Checks: "waveform_gen:wave_gen2"  ;
++-------------------+-------+----------+--------------+
+; Port              ; Type  ; Severity ; Details      ;
++-------------------+-------+----------+--------------+
+; TYPE              ; Input ; Info     ; Stuck at GND ;
+; NOTE[4..2]        ; Input ; Info     ; Stuck at VCC ;
+; AMPLITUDE[30..21] ; Input ; Info     ; Stuck at GND ;
+; AMPLITUDE[19..10] ; Input ; Info     ; Stuck at GND ;
+; AMPLITUDE[8..0]   ; Input ; Info     ; Stuck at GND ;
++-------------------+-------+----------+--------------+
+
+
 +---------------------------------------------------+
-; Port Connectivity Checks: "waveform_gen:sine_gen" ;
-+------+-------+----------+-------------------------+
-; Port ; Type  ; Severity ; Details                 ;
-+------+-------+----------+-------------------------+
-; TYPE ; Input ; Info     ; Stuck at GND            ;
-+------+-------+----------+-------------------------+
+; Port Connectivity Checks: "waveform_gen:wave_gen" ;
++------------+-------+----------+-------------------+
+; Port       ; Type  ; Severity ; Details           ;
++------------+-------+----------+-------------------+
+; TYPE[2..1] ; Input ; Info     ; Stuck at GND      ;
++------------+-------+----------+-------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1593,37 +1822,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 345                         ;
-;     CLR               ; 52                          ;
-;     CLR SCLR          ; 16                          ;
+; arriav_ff             ; 442                         ;
+;     CLR               ; 53                          ;
+;     CLR SCLR          ; 48                          ;
 ;     ENA               ; 46                          ;
 ;     ENA CLR           ; 36                          ;
-;     ENA SCLR          ; 137                         ;
-;     SCLR              ; 27                          ;
+;     ENA CLR SCLR      ; 32                          ;
+;     ENA CLR SLD       ; 32                          ;
+;     ENA SCLR          ; 142                         ;
+;     SCLR              ; 22                          ;
 ;     plain             ; 31                          ;
 ; arriav_io_obuf        ; 6                           ;
-; arriav_lcell_comb     ; 454                         ;
-;     arith             ; 152                         ;
-;         1 data inputs ; 121                         ;
+; arriav_lcell_comb     ; 585                         ;
+;     arith             ; 184                         ;
+;         1 data inputs ; 153                         ;
 ;         2 data inputs ; 29                          ;
 ;         4 data inputs ; 1                           ;
 ;         5 data inputs ; 1                           ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 298                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 398                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 22                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 99                          ;
-;         6 data inputs ; 86                          ;
+;         2 data inputs ; 87                          ;
+;         3 data inputs ; 55                          ;
+;         4 data inputs ; 34                          ;
+;         5 data inputs ; 114                         ;
+;         6 data inputs ; 105                         ;
 ; boundary_port         ; 77                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 96                          ;
+; stratixv_ram_block    ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 1.93                        ;
+; Average LUT depth     ; 1.99                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1632,7 +1863,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1642,7 +1873,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 13 16:14:11 2025
+    Info: Processing started: Tue Nov 18 13:07:19 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off synth -c synth
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -1674,13 +1905,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file ext/ps2
     Info (12023): Found entity 1: Altera_UP_PS2_Command_Out File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/PS2_Controller/Altera_UP_PS2_Command_Out.v Line: 10
 Info (12021): Found 4 design units, including 4 entities, in source file waveform_gen.v
     Info (12023): Found entity 1: waveform_gen File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 1
-    Info (12023): Found entity 2: sine_gen File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 34
-    Info (12023): Found entity 3: square_gen File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 134
-    Info (12023): Found entity 4: saw_gen File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 142
+    Info (12023): Found entity 2: sine_gen File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 35
+    Info (12023): Found entity 3: square_gen File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 137
+    Info (12023): Found entity 4: saw_gen File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 229
 Info (12021): Found 1 design units, including 1 entities, in source file synth.v
     Info (12023): Found entity 1: synth File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file aud_out_processor.v
-Warning (10236): Verilog HDL Implicit Net warning at synth.v(58): created implicit net for "enable" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 58
 Info (12127): Elaborating entity "synth" for the top level hierarchy
 Warning (10034): Output port "HEX0" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
 Warning (10034): Output port "HEX1" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
@@ -1689,7 +1919,7 @@ Warning (10034): Output port "HEX3" at synth.v(27) has no driver File: C:/Users/
 Warning (10034): Output port "HEX4" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
 Warning (10034): Output port "HEX5" at synth.v(27) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
 Warning (10034): Output port "LEDR" at synth.v(28) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 28
-Info (12128): Elaborating entity "avconf" for hierarchy "avconf:av_config" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 63
+Info (12128): Elaborating entity "avconf" for hierarchy "avconf:av_config" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 65
 Warning (10230): Verilog HDL assignment warning at avconf.v(68): truncated value with size 32 to match size of target (16) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/avconf.v Line: 68
 Warning (10230): Verilog HDL assignment warning at avconf.v(119): truncated value with size 32 to match size of target (6) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/avconf.v Line: 119
 Warning (10270): Verilog HDL Case Statement warning at avconf.v(131): incomplete case statement has no default case item File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/avconf.v Line: 131
@@ -1697,16 +1927,15 @@ Info (12128): Elaborating entity "I2C_Controller" for hierarchy "avconf:av_confi
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(79): truncated value with size 32 to match size of target (1) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/I2C_Controller.v Line: 79
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(78): truncated value with size 32 to match size of target (1) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/I2C_Controller.v Line: 78
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(91): truncated value with size 32 to match size of target (6) File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/I2C_Controller.v Line: 91
-Info (12128): Elaborating entity "waveform_gen" for hierarchy "waveform_gen:sine_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 64
-Info (12128): Elaborating entity "sine_gen" for hierarchy "waveform_gen:sine_gen|sine_gen:sine_generator" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 10
-Warning (10030): Net "SINE_LUT.data_a" at waveform_gen.v(41) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 41
-Warning (10030): Net "SINE_LUT.waddr_a" at waveform_gen.v(41) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 41
-Warning (10030): Net "SINE_LUT.we_a" at waveform_gen.v(41) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 41
-Info (12128): Elaborating entity "square_gen" for hierarchy "waveform_gen:sine_gen|square_gen:square_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 11
-Warning (10034): Output port "OUT" at waveform_gen.v(138) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 138
-Info (12128): Elaborating entity "saw_gen" for hierarchy "waveform_gen:sine_gen|saw_gen:saw_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 12
-Warning (10034): Output port "OUT" at waveform_gen.v(146) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 146
-Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:processor" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 67
+Info (12128): Elaborating entity "waveform_gen" for hierarchy "waveform_gen:wave_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 66
+Info (12128): Elaborating entity "sine_gen" for hierarchy "waveform_gen:wave_gen|sine_gen:sine_generator" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 11
+Warning (10030): Net "SINE_LUT.data_a" at waveform_gen.v(42) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 42
+Warning (10030): Net "SINE_LUT.waddr_a" at waveform_gen.v(42) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 42
+Warning (10030): Net "SINE_LUT.we_a" at waveform_gen.v(42) has no driver or initial value, using a default initial value '0' File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 42
+Info (12128): Elaborating entity "square_gen" for hierarchy "waveform_gen:wave_gen|square_gen:square_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 12
+Info (12128): Elaborating entity "saw_gen" for hierarchy "waveform_gen:wave_gen|saw_gen:saw_gen" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 13
+Warning (10034): Output port "OUT" at waveform_gen.v(233) has no driver File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 233
+Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:processor" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 79
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "Audio_Controller:processor|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/Audio_Controller/Audio_Controller.v Line: 182
 Info (12128): Elaborating entity "Altera_UP_Audio_In_Deserializer" for hierarchy "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/Audio_Controller/Audio_Controller.v Line: 237
 Info (12128): Elaborating entity "Altera_UP_Audio_Bit_Counter" for hierarchy "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v Line: 159
@@ -1808,10 +2037,10 @@ Info (12133): Instantiated megafunction "Audio_Controller:processor|Audio_Clock:
 Info (12021): Found 1 design units, including 1 entities, in source file db/audio_clock_altpll.v
     Info (12023): Found entity 1: Audio_Clock_altpll File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/audio_clock_altpll.v Line: 29
 Info (12128): Elaborating entity "Audio_Clock_altpll" for hierarchy "Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:keyboard" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 68
+Info (12128): Elaborating entity "PS2_Controller" for hierarchy "PS2_Controller:keyboard" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 80
 Info (12128): Elaborating entity "Altera_UP_PS2_Data_In" for hierarchy "PS2_Controller:keyboard|Altera_UP_PS2_Data_In:PS2_Data_In" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/PS2_Controller/PS2_Controller.v Line: 246
 Info (12128): Elaborating entity "Altera_UP_PS2_Command_Out" for hierarchy "PS2_Controller:keyboard|Altera_UP_PS2_Command_Out:PS2_Command_Out" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/PS2_Controller/PS2_Controller.v Line: 266
-Info (12128): Elaborating entity "keyboard_transfer" for hierarchy "keyboard_transfer:decoder" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 69
+Info (12128): Elaborating entity "keyboard_transfer" for hierarchy "keyboard_transfer:decoder" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 81
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|q_b[0]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_n3i1.tdf Line: 37
@@ -1878,11 +2107,13 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|q_b[29]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_n3i1.tdf Line: 907
         Warning (14320): Synthesized away node "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|q_b[30]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_n3i1.tdf Line: 937
         Warning (14320): Synthesized away node "Audio_Controller:processor|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_7ba1:auto_generated|a_dpfifo_q2a1:dpfifo|altsyncram_n3i1:FIFOram|q_b[31]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_n3i1.tdf Line: 967
-Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276004): RAM logic "waveform_gen:sine_gen|sine_gen:sine_generator|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 87
+Info (276014): Found 4 instances of uninferred RAM logic
+    Info (276004): RAM logic "waveform_gen:wave_gen2|sine_gen:sine_generator|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 90
+    Info (276004): RAM logic "waveform_gen:wave_gen|square_gen:square_gen|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 178
+    Info (276004): RAM logic "waveform_gen:wave_gen|sine_gen:sine_generator|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/waveform_gen.v Line: 90
     Info (276004): RAM logic "avconf:av_config|Ram0" is uninferred due to inappropriate RAM size File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/ext/avconf/avconf.v Line: 131
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "waveform_gen:sine_gen|sine_gen:sine_generator|SINE_LUT_rtl_0" 
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "waveform_gen:wave_gen2|sine_gen:sine_generator|SINE_LUT_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
         Info (286033): Parameter WIDTH_A set to 32
         Info (286033): Parameter WIDTHAD_A set to 10
@@ -1893,8 +2124,19 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/synth.ram0_sine_gen_d6b59fd0.hdl.mif
-Info (12130): Elaborated megafunction instantiation "waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0"
-Info (12133): Instantiated megafunction "waveform_gen:sine_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0" with the following parameter:
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "waveform_gen:wave_gen|sine_gen:sine_generator|SINE_LUT_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 10
+        Info (286033): Parameter NUMWORDS_A set to 1024
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/synth.ram0_sine_gen_d6b59fd0.hdl.mif
+Info (12130): Elaborated megafunction instantiation "waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0"
+Info (12133): Instantiated megafunction "waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
     Info (12134): Parameter "WIDTH_A" = "32"
     Info (12134): Parameter "WIDTHAD_A" = "10"
@@ -1907,6 +2149,18 @@ Info (12133): Instantiated megafunction "waveform_gen:sine_gen|sine_gen:sine_gen
     Info (12134): Parameter "INIT_FILE" = "db/synth.ram0_sine_gen_d6b59fd0.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o7d1.tdf
     Info (12023): Found entity 1: altsyncram_o7d1 File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_o7d1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0"
+Info (12133): Instantiated megafunction "waveform_gen:wave_gen|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "10"
+    Info (12134): Parameter "NUMWORDS_A" = "1024"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/synth.ram0_sine_gen_d6b59fd0.hdl.mif"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 27
@@ -1962,7 +2216,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 28
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 133 registers lost all their fanouts during netlist optimizations.
+Info (17049): 190 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 9 MSB VCC or GND address nodes from RAM block "waveform_gen:wave_gen2|sine_gen:sine_generator|altsyncram:SINE_LUT_rtl_0|altsyncram_o7d1:auto_generated|ALTSYNCRAM" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/altsyncram_o7d1.tdf Line: 685
 Warning (20013): Ignored 571 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[10] -entity DE1_SoC was ignored
@@ -2539,10 +2794,8 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance Audio_Controller:processor|Audio_Clock:Audio_Clock|altpll:altpll_component|Audio_Clock_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/db/audio_clock_altpll.v Line: 62
     Info: Must be connected
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 26
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 26
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 26
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 26
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 26
@@ -2553,17 +2806,17 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 25
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 25
     Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: C:/Users/matth/OneDrive/Documents/GitHub/ece241-synth/src/synth.v Line: 33
-Info (21057): Implemented 679 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 844 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 55 output pins
     Info (21060): Implemented 6 bidirectional pins
-    Info (21061): Implemented 505 logic cells
-    Info (21064): Implemented 96 RAM segments
+    Info (21061): Implemented 638 logic cells
+    Info (21064): Implemented 128 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 727 warnings
-    Info: Peak virtual memory: 4931 megabytes
-    Info: Processing ended: Thu Nov 13 16:14:19 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 723 warnings
+    Info: Peak virtual memory: 4972 megabytes
+    Info: Processing ended: Tue Nov 18 13:08:00 2025
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:21
 
 

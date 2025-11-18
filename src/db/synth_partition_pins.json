@@ -42,6 +42,14 @@
 				{
 					"name" : "SW[6]",
 					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
 				}
 			]
 		}

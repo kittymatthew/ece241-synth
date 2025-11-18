@@ -42,26 +42,38 @@ module synth (
 
     // Internal Signals
 
-    wire reset;
+    wire reset, enable;
     wire [4:0] NOTE;
     wire [31:0] AUDIO_OUT;
+    wire [31:0] MOD_OUT;
     wire audio_out_allowed;
     wire [31:0] left_unused, right_unused; 
     wire audio_in_unused;
     wire sent_enable;
-    wire [7:0]keyboard_input;
+    wire [7:0] keyboard_input;
     wire unused;
     wire unused2;
+
 
     // Static assignments
     assign reset = !KEY[0];
     assign enable = SW[6];
-    //assign NOTE [4:0] = SW[4:0];
+    //assign NOTE [4:0] = 5'b01100;
 
     parameter tSINE = 3'b000, tSQUARE = 3'b001, tSAW = 3'b010;
 
     avconf av_config (CLOCK_50, reset, FPGA_I2C_SCLK, FPGA_I2C_SDAT); // Module for configuring the audio_controller
-    waveform_gen sine_gen (tSINE, NOTE, AUDIO_OUT, CLOCK_50, enable, reset); // Instantiate the waveform generator
+    waveform_gen wave_gen ({2'b00, SW[0]}, NOTE, ((SW[2] & SW[0]) ? MOD_OUT : 32'b1111_1111_1111_1111_1111_1111_1111_1111) , AUDIO_OUT, CLOCK_50, enable, reset); // Instantiate the waveform generator
+    waveform_gen wave_gen2 (tSINE, {1'b1, 1'b1, 1'b1, SW[8], SW[7]}, 
+                            {
+                                SW[5],
+                                10'b0,
+                                SW[4],
+                                10'b0,
+                                SW[3],
+                                9'b0
+                            }, MOD_OUT, CLOCK_50, enable, reset); // Instantiate the waveform generator
+   // waveform_gen wave_gen_sustain({2'b00, SW[1]}, , 32'b1111_1111_1111_1111_1111_1111_1111_1111, AUDIO_OUT, CLOCK_50, enable, reset);
     Audio_Controller processor  (CLOCK_50, reset, 1'b0, 1'b0, 1'b0, AUDIO_OUT, AUDIO_OUT, // Output the same signal to the left and right channels
                                 enable, AUD_ADCDAT, AUD_BCLK, AUD_ADCLRCK, AUD_DACLRCK, left_unused, // Audio inputs are not used
                                 right_unused, audio_in_unused, audio_out_allowed, AUD_XCK, AUD_DACDAT);

@@ -1,5 +1,5 @@
 Flow report for synth
-Thu Nov 13 16:16:30 2025
+Tue Nov 18 13:10:49 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 13 16:16:24 2025       ;
+; Flow Status                     ; Successful - Tue Nov 18 13:10:42 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; synth                                       ;
 ; Top-level Entity Name           ; synth                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 269 / 32,070 ( < 1 % )                      ;
-; Total registers                 ; 354                                         ;
+; Logic utilization (in ALMs)     ; 344 / 32,070 ( 1 % )                        ;
+; Total registers                 ; 467                                         ;
 ; Total pins                      ; 77 / 457 ( 17 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 40,960 / 4,065,280 ( 1 % )                  ;
+; Total block memory bits         ; 41,024 / 4,065,280 ( 1 % )                  ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2025 16:14:11 ;
+; Start date & time ; 11/18/2025 13:07:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; synth               ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167939679021240.176306845113972        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 167939679021240.176348924312068        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4931 MB             ; 00:00:16                           ;
-; Fitter               ; 00:01:58     ; 1.0                     ; 7954 MB             ; 00:15:53                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4844 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.6                     ; 5343 MB             ; 00:00:06                           ;
-; Total                ; 00:02:16     ; --                      ; --                  ; 00:16:19                           ;
+; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4972 MB             ; 00:00:21                           ;
+; Fitter               ; 00:02:28     ; 1.0                     ; 8002 MB             ; 00:19:34                           ;
+; Assembler            ; 00:00:12     ; 1.0                     ; 4841 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.7                     ; 5355 MB             ; 00:00:07                           ;
+; Total                ; 00:03:25     ; --                      ; --                  ; 00:20:07                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
