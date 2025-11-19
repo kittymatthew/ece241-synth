@@ -1,10 +1,10 @@
 module sustain_fsm (clock, reset, sustain_button, key_pressed, current_note_on_key, final_note);	
-	input clock,
-    input reset,
-    input sustain_button,      
-    input key_pressed,         
-    input [4:0] current_note_on_key,
-    output reg [4:0] final_note
+	input clock;
+    input reset;
+    input sustain_button;      
+    input key_pressed;        
+    input [4:0] current_note_on_key;
+    output reg [4:0] final_note;
 
 	reg [4:0] sustained_note;
 	always@(posedge clock)

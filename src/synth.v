@@ -1,4 +1,4 @@
-`define MODELSIM
+//`define MODELSIM
 
 module synth (
     CLOCK_50, // 50 MHz clock
@@ -56,6 +56,7 @@ module synth (
     wire [7:0] keyboard_input;
     wire unused;
     wire unused2;
+    wire key_pressed;
 
 
     // Static assignments
@@ -68,17 +69,17 @@ module synth (
     parameter tSINE = 3'b000, tSQUARE = 3'b001, tSAW = 3'b010;
 
     waveform_gen wave_gen ({2'b00, SW[0]}, NOTE, // SW[0] controls the wave type
-                            ((SW[1] & SW[0]) ? MOD_OUT : 32'b1111_1111_1111_1111_1111_1111_1111_1111), // SW[1] enables modulation on the square wave
+                            ((SW[1] & SW[0]) ? (32'b1111_1111_1111_1111_1111_1111_1111_1111 - MOD_OUT) : 32'b1111_1111_1111_1111_1111_1111_1111_1111), // SW[1] enables modulation on the square wave
                             WAVE1_OUT, CLOCK_50, enable, reset); // Output to WAVE1_OUT, and pass the enable, reset, and clock signals
 
-    waveform_gen mod_gen (tSINE, {1'b1, 1'b1, 1'b1, SW[3], SW[2]}, // SW[2] and SW[3] determine the speed of the modulation
+    waveform_gen mod_gen ({2'b00, SW[7]}, {1'b1, 1'b1, 1'b1, SW[3], SW[2]}, // SW[2] and SW[3] determine the speed of the modulation
                         {SW[5], 1'b0, SW[4], 29'b0}, // SW[5] and SW[4] determine the amplitude of the modulation
                         MOD_OUT, CLOCK_50, enable, reset); // Output to MOD_OUT, and pass the enable, reset, and clock signals
 
     waveform_gen wave_gen_sustain ({2'b00, SW[6]}, SUSTAIN_NOTE, // SW[6] controls the wave type
                                     32'b1111_1111_1111_1111_1111_1111_1111_1111, WAVE2_OUT, CLOCK_50, enable, reset); // Output to WAVE2_OUT
 
-    sustain_fsm sustain (CLOCK_50, reset, !KEY[1], sent_enable, NOTE, SUSTAIN_NOTE);
+    sustain_fsm sustain (CLOCK_50, reset, !KEY[1], key_pressed, NOTE, SUSTAIN_NOTE);
 
     /*
         Playing multiple notes at once is as simple as adding the output waveforms together arithmetically.
@@ -97,6 +98,6 @@ module synth (
         avconf av_config (CLOCK_50, reset, FPGA_I2C_SCLK, FPGA_I2C_SDAT); // Module for configuring the audio_controller
 
         PS2_Controller keyboard (CLOCK_50, reset, 8'b0, 1'b0, PS2_CLK, PS2_DAT, unused, unused2, keyboard_input, sent_enable); 
-        keyboard_transfer decoder (CLOCK_50, reset, keyboard_input, sent_enable, NOTE); 
+        keyboard_transfer decoder (CLOCK_50, reset, keyboard_input, sent_enable, key_pressed, NOTE); 
     `endif 
 endmodule
