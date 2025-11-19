@@ -78,6 +78,8 @@ module synth (
     waveform_gen wave_gen_sustain ({2'b00, SW[6]}, SUSTAIN_NOTE, // SW[6] controls the wave type
                                     32'b1111_1111_1111_1111_1111_1111_1111_1111, WAVE2_OUT, CLOCK_50, enable, reset); // Output to WAVE2_OUT
 
+    sustain_fsm sustain (CLOCK_50, reset, !KEY[1], sent_enable, NOTE, SUSTAIN_NOTE);
+
     /*
         Playing multiple notes at once is as simple as adding the output waveforms together arithmetically.
         However, in order to prevent overflow, we divide by two by bit-shifting one place to the right.
