@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+`define MODELSIM
+//`define TESTA
 
 module testbench ();
     reg   CLOCK_50; // 50 MHz Clock
@@ -32,8 +34,25 @@ module testbench ();
     end
 
     initial begin // Main testbench actions
-        SW <= 10'b0001001100;
-        #5000000 SW <= 10'b0001000001;
+        `ifdef TESTA
+            SW <= 10'b0000000000;
+            SW[9] <= 1'b1; // Set enable to on
+            #50000000 SW <= 10'b0001000001; // Switch waveform to square
+        `endif 
+        `ifndef TESTA
+            SW <= 10'b0000000000;
+            SW[9] <= 1'b1; // Set enable to on
+            SW[0] <= 1'b1; // Set waveform to sqaure
+            SW[1] <= 1'b1; // Set modulation on
+            SW[2] <= 1'b1; // Set modulation speed to slow
+            SW[3] <= 1'b0;
+            SW[4] <= 1'b1; // Set modulation amplitude to high
+            SW[5] <= 1'b1;
+            #50000000 SW[2] <= 1'b0; // Switch modulation speed to very fast
+            SW[3] <= 1'b1;
+            SW[4] <= 1'b1; // Set modulation amplitude to low
+            SW[5] <= 1'b0;
+        `endif 
     end
 
     synth U1    (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LEDR,

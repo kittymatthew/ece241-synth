@@ -78,6 +78,7 @@ module sine_gen (NOTE, OUT, clock, reset);
     parameter C3 = 5'b11001;
     parameter SLOW = 5'b11100;
     parameter FAST = 5'b11101;
+    parameter VFAST = 5'b11110;
 
     /* 
         The frequency we output is determined based on how 'fast' we traverse through the sine wave.
@@ -113,6 +114,9 @@ module sine_gen (NOTE, OUT, clock, reset);
             Asharp2: STEP = 32'd80087; // 932.33 Hz
             B2:      STEP = 32'd84849; // 987.77 Hz
             C3:      STEP = 32'd89901; // 1046.59 Hz
+            FAST:    STEP = 32'd429;   // 5 Hz
+            SLOW:    STEP = 32'd86;    // 1 Hz
+            VFAST:   STEP = 32'd4295;   // 50 Hz
             default: STEP = 32'd0;
         endcase
     end
@@ -133,15 +137,14 @@ module sine_gen (NOTE, OUT, clock, reset);
     end
 endmodule
 
-// Square wave generator - will be implemented later, time permitting
 module square_gen (NOTE, OUT, AMPLITUDE, clock, reset);
-    input [4:0] NOTE;
-    input [31:0] AMPLITUDE;
+    input [4:0] NOTE; // Note to be played
+    input [31:0] AMPLITUDE; // Variable-amplitude square wave
     input clock, reset;
 
     output reg [31:0] OUT;
 
-    reg [31:0] COUNT, TRACKER;
+    reg [31:0] COUNT, TRACKER; // Used to determine when to swap to the opposite peak
 
     parameter C = 5'b00001;
     parameter Csharp = 5'b00010;
@@ -195,7 +198,7 @@ module square_gen (NOTE, OUT, AMPLITUDE, clock, reset);
             E2:      COUNT = 32'd75843; // 659.26 Hz
             F2:      COUNT = 32'd71586; // 698.46 Hz
             Fsharp2: COUNT = 32'd67568; // 739.99 Hz
-            G2:      COUNT = 32'd67344; // 783.99 Hz
+            G2:      COUNT = 32'd63766; // 783.99 Hz
             Gsharp2: COUNT = 32'd60197; // 830.61 Hz
             A2:      COUNT = 32'd56818; // 880.00 Hz
             Asharp2: COUNT = 32'd53629; // 932.33 Hz
@@ -211,15 +214,15 @@ module square_gen (NOTE, OUT, AMPLITUDE, clock, reset);
         if (reset) begin // Reset the signals on reset
             TRACKER <= 32'b0; 
             OUT <= 32'b0; 
-        end else if (TRACKER == COUNT) begin
-            if (OUT != 32'b0) begin
+        end else if (TRACKER >= COUNT) begin // When we've reached the target
+            if (OUT != 32'b0) begin // Flip the square wave to/from 0 and AMPLITUDE
                 OUT <= 32'b0;
             end else begin
                 OUT <= AMPLITUDE;
             end
-            TRACKER <= 32'b0;
+            TRACKER <= 32'b0; // Reset the counter
         end else begin
-            TRACKER <= TRACKER + 1;
+            TRACKER <= TRACKER + 1; // Continue incrementing
         end
     end
 

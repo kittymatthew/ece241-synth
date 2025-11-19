@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/matth/OneDrive/Desktop/ECE241/Lab 5/Part 3/ModelSim
 vAltera_UP_Audio_Bit_Counter
-Z1 !s110 1762994003
+Z1 !s110 1763519542
 !i10b 1
 !s100 0o^lS^IaZf6lc8;mFc89O3
 IWE7gCzzeBz[K^[_k9z;Y11
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1762994003.000000
+Z7 !s108 1763519542.000000
 Z8 !s107 ../ext/Audio_Controller/Audio_Controller.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
 Z9 !s90 -reportprogress|300|../ext/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|../ext/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|../ext/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|../ext/Audio_Controller/Altera_UP_Clock_Edge.v|../ext/Audio_Controller/Altera_UP_SYNC_FIFO.v|../ext/Audio_Controller/Audio_Clock.v|../ext/Audio_Controller/Audio_Controller.v|
 !i113 1
@@ -93,7 +93,7 @@ R9
 R10
 n@altera_@u@p_@clock_@edge
 vAltera_UP_PS2_Command_Out
-Z12 !s110 1762825140
+Z12 !s110 1763518920
 !i10b 1
 !s100 ZjDIV:z^W4aE7ECD]ReVK0
 IR1znRz7aBUCYVzAC2@fTN3
@@ -107,7 +107,7 @@ R6
 r1
 !s85 0
 31
-Z14 !s108 1762825140.000000
+Z14 !s108 1763518920.000000
 Z15 !s107 ../ext/PS2_Controller/PS2_Controller.v|../ext/PS2_Controller/Altera_UP_PS2_Data_In.v|../ext/PS2_Controller/Altera_UP_PS2_Command_Out.v|
 Z16 !s90 -reportprogress|300|../ext/PS2_Controller/Altera_UP_PS2_Command_Out.v|../ext/PS2_Controller/Altera_UP_PS2_Data_In.v|../ext/PS2_Controller/PS2_Controller.v|
 !i113 1
@@ -300,6 +300,26 @@ R18
 !i113 1
 R10
 n@i2@c_@controller
+vkeyboard_transfer
+R1
+!i10b 1
+!s100 Po^P]@SdSK`JXnM9;YID=1
+IDY^Ra6jTcJNkm9]ajjOPj3
+R2
+R3
+w1763066939
+8../Keyboard_transfer_notes.v
+F../Keyboard_transfer_notes.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+Z26 !s107 ../waveform_gen.v|../synth.v|../sustain.v|../aud_out_processor.v|../Keyboard_transfer_notes.v|
+Z27 !s90 -reportprogress|300|../Keyboard_transfer_notes.v|../aud_out_processor.v|../sustain.v|../synth.v|../waveform_gen.v|
+!i113 1
+R10
 vletterMux
 R19
 !i10b 1
@@ -342,23 +362,23 @@ R25
 !i113 1
 R10
 vsaw_gen
-Z26 !s110 1762994004
+R1
 !i10b 1
-!s100 DPEK0@R=bX;5Uh0NIb9:L1
-IZ8hdR7dVHfNRfH@YG0Re;2
+!s100 AZb_]UU8ek=fzofK?AVXU3
+I2hH35bc]J:2WLL00:5jba1
 R2
 R3
-Z27 w1762962514
-Z28 8../waveform_gen.v
-Z29 F../waveform_gen.v
-L0 142
+Z28 w1763518844
+Z29 8../waveform_gen.v
+Z30 F../waveform_gen.v
+L0 232
 R6
 r1
 !s85 0
 31
 R7
-Z30 !s107 ../waveform_gen.v|../synth.v|../aud_out_processor.v|
-Z31 !s90 -reportprogress|300|../aud_out_processor.v|../synth.v|../waveform_gen.v|
+R26
+R27
 !i113 1
 R10
 vshiftReg_4bit
@@ -383,102 +403,122 @@ R25
 R10
 nshift@reg_4bit
 vsine_gen
-R26
+R1
 !i10b 1
-!s100 d1Sd11B]FfU>jm4<aVUg30
-IJ35jZj`dQbHkTfWbW?i2P0
+!s100 gPBj[D`AQn;oZC64;XXYk1
+I>YgP?acfMQIPf<S_;o7V@1
 R2
 R3
-R27
 R28
 R29
-L0 34
+R30
+L0 35
 R6
 r1
 !s85 0
 31
 R7
-R30
-R31
+R26
+R27
 !i113 1
 R10
 vsquare_gen
-R26
+R1
 !i10b 1
-!s100 W0hI;k73f3MLB]9]c>0Hg2
-I`Y3`fLbN2H>j`P?P`AofU1
+!s100 A7zV26IC6]nH?Ce:Sj<1k0
+I[V]_IXVo9I=Wl9O@Y9?9@0
 R2
 R3
-R27
 R28
 R29
-L0 134
+R30
+L0 140
 R6
 r1
 !s85 0
 31
 R7
-R30
-R31
+R26
+R27
 !i113 1
 R10
-vsynth
-R26
+vsustain_feature
+R1
 !i10b 1
-!s100 NEA0=9_J9LE>RR=X:=h]C1
-IOo;HRRZKckMhWeI@13?nC2
+!s100 MK=8nzD=D=0Mc_0g03mg?1
+I0mbSz=EPM:NCk[Y:9CW3?1
 R2
 R3
-w1762993883
-8../synth.v
-F../synth.v
+w1763432519
+8../sustain.v
+F../sustain.v
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-R30
-R31
+R26
+R27
 !i113 1
 R10
-vtestbench
-R26
+vsynth
+R1
 !i10b 1
-!s100 lQ6^7eX[Wc=lX>2W[V3kX3
-I>1SJ4CA582QJagI8NOG0g2
+!s100 ?;JSfY7laWhkeOIOS;S;I3
+IcbfeKF<[9[_I5YZ@7]PN12
 R2
 R3
-w1762993997
-8testbench.v
-Ftestbench.v
+w1763519020
+8../synth.v
+F../synth.v
 L0 3
 R6
 r1
 !s85 0
 31
-!s108 1762994004.000000
+R7
+R26
+R27
+!i113 1
+R10
+vtestbench
+R1
+!i10b 1
+!s100 nLhHHDLE]_f?9d@fH<]7R0
+Ig8G4Z;S>_82ZHA>V2U5[b2
+R2
+R3
+w1763519538
+8testbench.v
+Ftestbench.v
+L0 5
+R6
+r1
+!s85 0
+31
+R7
 !s107 testbench.v|
 !s90 -reportprogress|300|testbench.v|
 !i113 1
 R10
 vwaveform_gen
-R26
+R1
 !i10b 1
-!s100 8eOaOO0nTz@QVOeeLz3Jo1
-IOPcNK5nL1^4hJFgXh7hPg3
+!s100 ciJc5MmSW;a;aQB8<AkHo1
+Imaj20N;>a7?W2X1SQ6C4:2
 R2
 R3
-R27
 R28
 R29
+R30
 L0 1
 R6
 r1
 !s85 0
 31
 R7
-R30
-R31
+R26
+R27
 !i113 1
 R10
