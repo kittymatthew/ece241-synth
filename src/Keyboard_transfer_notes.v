@@ -1,8 +1,10 @@
-module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_enable, note_out);
+module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_enable, key_pressed, note_out);
     input clock, reset; 
     input [7:0]data_to_be_transferred; 
     input data_transfered_enable;
     reg [4:0]buffer;
+    reg keyboard_break;
+    output reg key_pressed;
     output reg [4:0] note_out;
     parameter A=8'h1A, S=8'h1B, X=8'h22, D=8'h23, C=8'h21, V=8'h2A, G=8'h34, B=8'h32 , H=8'h33, N=8'h31 ,J=8'h3B, M=8'h3A, Q= 8'h15, key_2= 8'h1E, W=8'h1D , key_3=8'h26, E=8'h24 , R=8'h2D, key_5=8'h2E, T=8'h2C, key_6=8'h36,Y=8'h35,key_7=8'h3D,U=8'h3C,I=8'h43;
     parameter C_note = 5'b00001;
@@ -66,9 +68,27 @@ module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_e
     begin
         if(reset)begin
             note_out<=0; 
+            keyboard_break<=0;
+            key_pressed<=0;
         end
         else if(data_transfered_enable) begin 
-            note_out<=buffer;
+            if(data_to_be_transferred==8'hF0)
+            begin
+                keyboard_break<=1;
+            end
+            else if(keyboard_break)
+            begin 
+                note_out<=0; 
+                keyboard_break<=0;
+                key_pressed<=0;
+            end
+            else
+            begin
+                note_out<=buffer;
+                keyboard_break<=0;
+                key_pressed<=1;
+            end
+
         end
     end
 
