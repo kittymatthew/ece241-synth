@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 `define MODELSIM
-//`define TESTA
+`define TESTA
 
 module testbench ();
     reg   CLOCK_50; // 50 MHz Clock
@@ -30,6 +30,7 @@ module testbench ();
 
     initial begin // Reset the circuit at the beginning
         KEY[0] <= 1'b0;
+        KEY[1] <= 1'b1;
         #10 KEY[0] <= 1'b1;
     end
 
@@ -37,7 +38,8 @@ module testbench ();
         `ifdef TESTA
             SW <= 10'b0000000000;
             SW[9] <= 1'b1; // Set enable to on
-            #50000000 SW <= 10'b0001000001; // Switch waveform to square
+            #50000000 SW[0] <= 1'b1; // Set waveform to square
+            SW[6] <= 1'b1;
         `endif 
         `ifndef TESTA
             SW <= 10'b0000000000;
@@ -48,7 +50,7 @@ module testbench ();
             SW[3] <= 1'b0;
             SW[4] <= 1'b1; // Set modulation amplitude to high
             SW[5] <= 1'b1;
-            #50000000 SW[2] <= 1'b0; // Switch modulation speed to very fast
+            #100000000 SW[2] <= 1'b0; // Switch modulation speed to very fast
             SW[3] <= 1'b1;
             SW[4] <= 1'b1; // Set modulation amplitude to low
             SW[5] <= 1'b0;

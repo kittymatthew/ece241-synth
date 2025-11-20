@@ -2,12 +2,18 @@ module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_e
     input clock, reset; 
     input [7:0]data_to_be_transferred; 
     input data_transfered_enable;
+
     reg [4:0]buffer;
     reg keyboard_break;
+
     output reg key_pressed;
     output reg [4:0] note_out;
-    parameter A=8'h1A, S=8'h1B, X=8'h22, D=8'h23, C=8'h21, V=8'h2A, G=8'h34, B=8'h32 , H=8'h33, N=8'h31 ,J=8'h3B, M=8'h3A, Q= 8'h15, key_2= 8'h1E, W=8'h1D , key_3=8'h26, E=8'h24 , R=8'h2D, key_5=8'h2E, T=8'h2C, key_6=8'h36,Y=8'h35,key_7=8'h3D,U=8'h3C,I=8'h43;
-    parameter C_note = 5'b00001;
+
+    parameter A=8'h1A, S=8'h1B, X=8'h22, D=8'h23, C=8'h21, V=8'h2A, G=8'h34, B=8'h32 , H=8'h33, // Keyboard scan codes
+                N=8'h31 ,J=8'h3B, M=8'h3A, Q= 8'h15, key_2= 8'h1E, W=8'h1D , key_3=8'h26, E=8'h24,
+                R=8'h2D, key_5=8'h2E, T=8'h2C, key_6=8'h36,Y=8'h35,key_7=8'h3D,U=8'h3C,I=8'h43;
+
+    parameter C_note = 5'b00001; // Note mappings
     parameter Csharp_note = 5'b00010;
     parameter D_note = 5'b00011;
     parameter Dsharp_note = 5'b00100;
@@ -33,9 +39,8 @@ module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_e
     parameter B2_note = 5'b11000;
     parameter C3_note = 5'b11001;
 
-    always@(*)
-        begin
-            case(data_to_be_transferred)
+    always @ (*) begin
+            case (data_to_be_transferred) // Map the keys to the correct note
                 A: buffer=C_note; 
                 S: buffer=Csharp_note; 
                 X: buffer=D_note; 
@@ -64,32 +69,23 @@ module keyboard_transfer(clock, reset, data_to_be_transferred, data_transfered_e
                 default: buffer=5'b00000;
         endcase
     end
-    always@(posedge clock)
-    begin
-        if(reset)begin
-            note_out<=0; 
-            keyboard_break<=0;
-            key_pressed<=0;
-        end
-        else if(data_transfered_enable) begin 
-            if(data_to_be_transferred==8'hF0)
-            begin
+    always @ (posedge clock) begin
+        if(reset)begin // Reset everything on reset signal
+            note_out <= 0; 
+            keyboard_break <= 0;
+            key_pressed <= 0;
+        end else if(data_transfered_enable) begin 
+            if(data_to_be_transferred==8'hF0) begin // Key released
                 keyboard_break<=1;
-            end
-            else if(keyboard_break)
-            begin 
+            end else if(keyboard_break) begin // Stop transmitting the note
                 note_out<=0; 
                 keyboard_break<=0;
-                key_pressed<=0;
-            end
-            else
-            begin
+                key_pressed<=0; 
+            end else begin // Otherwise, continue to transmit until released
                 note_out<=buffer;
                 keyboard_break<=0;
                 key_pressed<=1;
             end
-
         end
     end
-
 endmodule
